@@ -3,7 +3,7 @@
 export interface UserProfile {
   id: string;
   full_name: string;
-  role: 'student' | 'teacher' | 'staff' | 'admin';
+  role: 'teacher' | 'staff' | 'admin';
   email: string;
   phone: string;
   created_at: string;
@@ -17,6 +17,7 @@ export interface Equipment {
   status: 'available' | 'in_use' | 'maintenance';
   description: string;
   location: string;
+  quantity: number;
   created_at: string;
   updated_at: string;
 }
@@ -28,7 +29,7 @@ export interface Scheduling {
   start_date: string;
   end_date: string;
   notes: string;
-  status: 'scheduled' | 'completed' | 'cancelled';
+  status: 'scheduled' | 'confirmed' | 'completed' | 'cancelled';
   created_at: string;
   updated_at: string;
 }
@@ -60,24 +61,6 @@ export const mockUsers: UserProfile[] = [
     phone: '(11) 98765-4323',
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
-  },
-  {
-    id: '4',
-    full_name: 'Ana Costa',
-    role: 'student',
-    email: 'ana.costa@escola.com',
-    phone: '(11) 98765-4324',
-    created_at: '2025-01-15T10:00:00Z',
-    updated_at: '2025-01-15T10:00:00Z'
-  },
-  {
-    id: '5',
-    full_name: 'Carlos Pereira',
-    role: 'student',
-    email: 'carlos.pereira@escola.com',
-    phone: '(11) 98765-4325',
-    created_at: '2025-01-15T10:00:00Z',
-    updated_at: '2025-01-15T10:00:00Z'
   }
 ];
 
@@ -89,6 +72,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Projetor multimídia 3600 lumens',
     location: 'Sala de Audiovisual',
+    quantity: 3,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -99,6 +83,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Notebook i7 16GB RAM',
     location: 'Laboratório de Informática',
+    quantity: 15,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -109,6 +94,7 @@ export const mockEquipment: Equipment[] = [
     status: 'in_use',
     description: 'Câmera profissional para eventos',
     location: 'Departamento de Mídia',
+    quantity: 2,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -119,6 +105,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Microfone profissional',
     location: 'Auditório',
+    quantity: 5,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -129,6 +116,7 @@ export const mockEquipment: Equipment[] = [
     status: 'maintenance',
     description: 'Quadro branco interativo 85"',
     location: 'Sala 101',
+    quantity: 1,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -139,6 +127,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'iPad Pro 12.9" 256GB',
     location: 'Biblioteca',
+    quantity: 10,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -149,6 +138,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Impressora laser colorida',
     location: 'Secretaria',
+    quantity: 2,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -159,6 +149,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Microscópio binocular 1000x',
     location: 'Laboratório de Biologia',
+    quantity: 8,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -169,6 +160,7 @@ export const mockEquipment: Equipment[] = [
     status: 'available',
     description: 'Kit LEGO Mindstorms EV3',
     location: 'Sala de Tecnologia',
+    quantity: 6,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   },
@@ -179,6 +171,7 @@ export const mockEquipment: Equipment[] = [
     status: 'in_use',
     description: 'Violão acústico nylon',
     location: 'Sala de Música',
+    quantity: 4,
     created_at: '2025-01-15T10:00:00Z',
     updated_at: '2025-01-15T10:00:00Z'
   }

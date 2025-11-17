@@ -29,7 +29,7 @@ interface Scheduling {
   start_date: string;
   end_date: string;
   notes: string | null;
-  status: 'scheduled' | 'completed' | 'cancelled';
+  status: 'scheduled' | 'confirmed' | 'completed' | 'cancelled';
 }
 
 interface SchedulingWithDetails extends Scheduling {
@@ -170,6 +170,18 @@ export default function SchedulingPage() {
     }
   };
 
+  const handleConfirm = async () => {
+    if (selectedScheduling && confirm('Tem certeza que deseja confirmar este agendamento?')) {
+      await new Promise(resolve => setTimeout(resolve, 300));
+      setSchedulings(prev => prev.map(sched => 
+        sched.id === selectedScheduling.id 
+          ? { ...sched, status: 'confirmed' as const }
+          : sched
+      ));
+      setIsModalOpen(false);
+    }
+  };
+
   const handleCancel = async () => {
     if (selectedScheduling && confirm('Tem certeza que deseja cancelar este agendamento?')) {
       await new Promise(resolve => setTimeout(resolve, 300));
@@ -190,6 +202,8 @@ export default function SchedulingPage() {
       ? 'bg-red-200 text-red-800'
       : scheduling.status === 'completed'
       ? 'bg-green-200 text-green-800'
+      : scheduling.status === 'confirmed'
+      ? 'bg-purple-200 text-purple-800'
       : 'bg-blue-200 text-blue-800',
   }));
 
@@ -220,13 +234,16 @@ export default function SchedulingPage() {
           ? 'bg-red-200 text-red-800'
           : scheduling.status === 'completed'
           ? 'bg-green-200 text-green-800'
+          : scheduling.status === 'confirmed'
+          ? 'bg-purple-200 text-purple-800'
           : 'bg-blue-200 text-blue-800',
       }));
   };
 
   const getStatusBadge = (status: Scheduling['status']) => {
-    const variants: Record<Scheduling['status'], { variant: 'success' | 'warning' | 'danger'; label: string }> = {
+    const variants: Record<Scheduling['status'], { variant: 'success' | 'warning' | 'danger' | 'info'; label: string }> = {
       scheduled: { variant: 'warning', label: 'Agendado' },
+      confirmed: { variant: 'info', label: 'Confirmado' },
       completed: { variant: 'success', label: 'Concluído' },
       cancelled: { variant: 'danger', label: 'Cancelado' },
     };
@@ -312,16 +329,38 @@ export default function SchedulingPage() {
               {selectedScheduling.status === 'scheduled' && (
                 <>
                   <button
-                    onClick={handleCancel}
-                    className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                    onClick={handleConfirm}
+                    className="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                   >
-                    Cancelar Agendamento
+                    Confirmar
                   </button>
                   <button
                     onClick={switchToEditMode}
                     className="flex-1 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
                   >
                     Editar
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                  >
+                    Cancelar
+                  </button>
+                </>
+              )}
+              {selectedScheduling.status === 'confirmed' && (
+                <>
+                  <button
+                    onClick={switchToEditMode}
+                    className="flex-1 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                  >
+                    Cancelar
                   </button>
                 </>
               )}
@@ -411,6 +450,7 @@ export default function SchedulingPage() {
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500"
                 >
                   <option value="scheduled">Agendado</option>
+                  <option value="confirmed">Confirmado</option>
                   <option value="completed">Concluído</option>
                   <option value="cancelled">Cancelado</option>
                 </select>

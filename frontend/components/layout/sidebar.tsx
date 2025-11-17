@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Package, Calendar, Users, LogOut, GraduationCap } from 'lucide-react';
+import { LayoutDashboard, Package, Calendar, Users, LogOut, GraduationCap, LaptopMinimal } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-  { name: 'Equipamentos', href: '/equipment', icon: Package },
+  { name: 'Equipamentos', href: '/equipment', icon: LaptopMinimal },
   { name: 'Agendamentos', href: '/scheduling', icon: Calendar },
   { name: 'Usuários', href: '/users', icon: Users },
 ];

@@ -127,6 +127,10 @@ export function DayScheduleView({
                 <span className="text-slate-600">Agendado</span>
               </div>
               <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded bg-purple-200"></div>
+                <span className="text-slate-600">Confirmado</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded bg-green-200"></div>
                 <span className="text-slate-600">Concluído</span>
               </div>

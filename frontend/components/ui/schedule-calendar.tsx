@@ -71,7 +71,7 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
     const days = [];
 
     for (let i = 0; i < firstDayOfMonth; i++) {
-      days.push(<div key={`empty-${i}`} className="h-24 bg-slate-50" />);
+      days.push(<div key={`empty-${i}`} className="h-32 bg-slate-50" />);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -82,15 +82,15 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
         <div
           key={day}
           onClick={() => onDateClick(new Date(currentDate.getFullYear(), currentDate.getMonth(), day))}
-          className={`h-24 border border-slate-200 p-2 cursor-pointer hover:bg-slate-50 transition-colors ${
+          className={`h-32 border border-slate-200 p-2 cursor-pointer hover:bg-slate-50 transition-colors ${
             today ? 'bg-blue-50 border-blue-300' : 'bg-white'
           }`}
         >
           <div className={`text-sm font-medium mb-1 ${today ? 'text-blue-600' : 'text-slate-700'}`}>
             {day}
           </div>
-          <div className="space-y-1">
-            {dayEvents.slice(0, 2).map(event => (
+          <div className="space-y-1 overflow-hidden">
+            {dayEvents.slice(0, 3).map(event => (
               <div
                 key={event.id}
                 onClick={(e) => {
@@ -104,9 +104,9 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
                 {event.title}
               </div>
             ))}
-            {dayEvents.length > 2 && (
-              <div className="text-xs text-slate-500 pl-1">
-                +{dayEvents.length - 2} mais
+            {dayEvents.length > 3 && (
+              <div className="text-xs text-slate-500 pl-1 font-medium">
+                +{dayEvents.length - 3} mais
               </div>
             )}
           </div>

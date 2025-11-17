@@ -13,7 +13,7 @@ interface UserProfile {
   id: string;
   full_name: string;
   email: string;
-  role: 'student' | 'teacher' | 'staff' | 'admin';
+  role: 'teacher' | 'staff' | 'admin';
   phone: string | null;
 }
 
@@ -28,7 +28,7 @@ export default function UsersPage() {
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
-    role: 'student' as UserProfile['role'],
+    role: 'teacher' as UserProfile['role'],
     phone: '',
     password: '',
   });
@@ -47,7 +47,7 @@ export default function UsersPage() {
     setFormData({
       full_name: '',
       email: '',
-      role: 'student',
+      role: 'teacher',
       phone: '',
       password: '',
     });
@@ -124,7 +124,6 @@ export default function UsersPage() {
 
   const getRoleBadge = (role: UserProfile['role']) => {
     const variants: Record<UserProfile['role'], { variant: 'info' | 'success' | 'warning' | 'danger'; label: string }> = {
-      student: { variant: 'info', label: 'Lider de Sala' },
       teacher: { variant: 'success', label: 'Professor' },
       staff: { variant: 'warning', label: 'Secretária' },
       admin: { variant: 'danger', label: 'Coordenador' },

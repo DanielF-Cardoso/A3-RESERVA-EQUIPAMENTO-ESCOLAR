@@ -42,19 +42,19 @@ export function DataTable<T extends { id: string }>({
 
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-max">
             <thead className="bg-slate-50 border-b border-slate-200">
               <tr>
                 {columns.map((column, index) => (
                   <th
                     key={index}
-                    className={`px-6 py-3 text-left text-xs font-medium text-slate-700 uppercase tracking-wider ${column.className || ''}`}
+                    className={`px-3 sm:px-6 py-3 text-left text-xs font-medium text-slate-700 uppercase tracking-wider ${column.className || ''}`}
                   >
                     {column.header}
                   </th>
                 ))}
                 {actions && (
-                  <th className="px-6 py-3 text-right text-xs font-medium text-slate-700 uppercase tracking-wider">
+                  <th className="px-3 sm:px-6 py-3 text-right text-xs font-medium text-slate-700 uppercase tracking-wider sticky right-0 bg-slate-50">
                     Ações
                   </th>
                 )}
@@ -65,7 +65,7 @@ export function DataTable<T extends { id: string }>({
                 <tr>
                   <td
                     colSpan={columns.length + (actions ? 1 : 0)}
-                    className="px-6 py-8 text-center text-slate-500"
+                    className="px-3 sm:px-6 py-8 text-center text-slate-500"
                   >
                     {emptyMessage}
                   </td>
@@ -74,14 +74,16 @@ export function DataTable<T extends { id: string }>({
                 data.map((item) => (
                   <tr key={item.id} className="hover:bg-slate-50 transition-colors">
                     {columns.map((column, index) => (
-                      <td key={index} className={`px-6 py-4 whitespace-nowrap text-sm text-slate-900 ${column.className || ''}`}>
-                        {typeof column.accessor === 'function'
-                          ? column.accessor(item)
-                          : String(item[column.accessor])}
+                      <td key={index} className={`px-3 sm:px-6 py-4 text-sm text-slate-900 ${column.className || ''}`}>
+                        <div className="max-w-xs truncate">
+                          {typeof column.accessor === 'function'
+                            ? column.accessor(item)
+                            : String(item[column.accessor])}
+                        </div>
                       </td>
                     ))}
                     {actions && (
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
+                      <td className="px-3 sm:px-6 py-4 text-right text-sm sticky right-0 bg-white">
                         {actions(item)}
                       </td>
                     )}
@@ -90,6 +92,11 @@ export function DataTable<T extends { id: string }>({
               )}
             </tbody>
           </table>
+        </div>
+        
+        {/* Indicador de scroll em mobile */}
+        <div className="lg:hidden p-2 text-center text-xs text-slate-500 border-t border-slate-200">
+          ← Arraste para ver mais →
         </div>
       </div>
     </div>

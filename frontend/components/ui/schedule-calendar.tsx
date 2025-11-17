@@ -82,31 +82,31 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
         <div
           key={day}
           onClick={() => onDateClick(new Date(currentDate.getFullYear(), currentDate.getMonth(), day))}
-          className={`h-32 border border-slate-200 p-2 cursor-pointer hover:bg-slate-50 transition-colors ${
+          className={`h-20 sm:h-28 lg:h-32 border border-slate-200 p-1 sm:p-2 cursor-pointer hover:bg-slate-50 transition-colors ${
             today ? 'bg-blue-50 border-blue-300' : 'bg-white'
           }`}
         >
-          <div className={`text-sm font-medium mb-1 ${today ? 'text-blue-600' : 'text-slate-700'}`}>
+          <div className={`text-xs sm:text-sm font-medium mb-1 ${today ? 'text-blue-600' : 'text-slate-700'}`}>
             {day}
           </div>
           <div className="space-y-1 overflow-hidden">
-            {dayEvents.slice(0, 3).map(event => (
+            {dayEvents.slice(0, 2).map(event => (
               <div
                 key={event.id}
                 onClick={(e) => {
                   e.stopPropagation();
                   onEventClick?.(event);
                 }}
-                className={`text-xs p-1 rounded truncate ${
+                className={`text-[10px] sm:text-xs p-0.5 sm:p-1 rounded truncate ${
                   event.color || 'bg-slate-200 text-slate-700'
                 } hover:opacity-80 transition-opacity`}
               >
                 {event.title}
               </div>
             ))}
-            {dayEvents.length > 3 && (
-              <div className="text-xs text-slate-500 pl-1 font-medium">
-                +{dayEvents.length - 3} mais
+            {dayEvents.length > 2 && (
+              <div className="text-[10px] sm:text-xs text-slate-500 pl-0.5 sm:pl-1 font-medium">
+                +{dayEvents.length - 2}
               </div>
             )}
           </div>
@@ -118,37 +118,40 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
   };
 
   return (
-    <div className="bg-white rounded-lg shadow">
+    <div className="bg-white rounded-lg shadow overflow-hidden">
       <div className="flex items-center justify-between p-4 border-b border-slate-200">
-        <h2 className="text-lg font-semibold text-slate-900">
+        <h2 className="text-base sm:text-lg font-semibold text-slate-900">
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
         </h2>
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2">
           <button
             onClick={previousMonth}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+            className="p-1.5 sm:p-2 hover:bg-slate-100 rounded-lg transition-colors"
           >
             <ChevronLeft size={20} className="text-slate-600" />
           </button>
           <button
             onClick={nextMonth}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+            className="p-1.5 sm:p-2 hover:bg-slate-100 rounded-lg transition-colors"
           >
             <ChevronRight size={20} className="text-slate-600" />
           </button>
         </div>
       </div>
 
-      <div className="p-4">
-        <div className="grid grid-cols-7 gap-0 mb-2">
-          {weekDays.map(day => (
-            <div key={day} className="text-center text-sm font-medium text-slate-600 py-2">
-              {day}
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-7 gap-0 border-l border-t border-slate-200">
-          {renderCalendarDays()}
+      <div className="p-2 sm:p-4 overflow-x-auto">
+        <div className="min-w-[280px]">
+          <div className="grid grid-cols-7 gap-0 mb-2">
+            {weekDays.map(day => (
+              <div key={day} className="text-center text-xs sm:text-sm font-medium text-slate-600 py-2">
+                <span className="hidden sm:inline">{day}</span>
+                <span className="sm:hidden">{day.substring(0, 1)}</span>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-0 border-l border-t border-slate-200">
+            {renderCalendarDays()}
+          </div>
         </div>
       </div>
     </div>

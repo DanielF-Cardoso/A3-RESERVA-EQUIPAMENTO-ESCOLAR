@@ -161,10 +161,11 @@ export default function EquipmentPage() {
         action={
           <button
             onClick={openCreateModal}
-            className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors text-sm sm:text-base whitespace-nowrap"
           >
-            <Plus size={20} />
-            Novo Equipamento
+            <Plus size={18} className="sm:size-20" />
+            <span className="hidden sm:inline">Novo Equipamento</span>
+            <span className="sm:hidden">Novo</span>
           </button>
         }
       />

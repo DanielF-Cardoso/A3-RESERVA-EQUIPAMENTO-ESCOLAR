@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Sidebar } from './sidebar';
+import { Footer } from './footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ export function MainLayout({ children }: MainLayoutProps) {
     <div className="flex h-screen bg-slate-50">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
-      <main className="flex-1 overflow-y-auto w-full">
+      <main className="flex-1 overflow-y-auto w-full flex flex-col">
         {/* Mobile Header com botão hambúrguer */}
         <div className="lg:hidden sticky top-0 z-30 bg-white border-b border-slate-200 px-4 py-3">
           <button
@@ -26,9 +27,11 @@ export function MainLayout({ children }: MainLayoutProps) {
           </button>
         </div>
 
-        <div className="p-4 sm:p-6 lg:p-8">
+        <div className="flex-1 p-4 sm:p-6 lg:p-8">
           {children}
         </div>
+
+        <Footer />
       </main>
     </div>
   );

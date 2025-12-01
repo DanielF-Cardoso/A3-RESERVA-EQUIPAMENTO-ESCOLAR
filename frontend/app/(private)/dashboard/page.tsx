@@ -6,80 +6,88 @@ import { MainLayout } from '@/components/layout/main-layout';
 import { PageHeader } from '@/components/ui/page-header';
 import { StatCard } from '@/components/ui/stat-card';
 import { StatusBadge } from '@/components/ui/status-badge';
-import { mockEquipment, mockScheduling, mockUsers } from '@/lib/mock-data';
+import { dashboardService, DashboardStats, RecentScheduling } from '@/lib/services/dashboard.service';
+import { equipmentsService, Equipment } from '@/lib/services/equipments.service';
+import { usersService, User } from '@/lib/services/users.service';
+import { useAuthContext } from '@/hooks/useAuthContext';
+import { useToast } from '@/hooks/use-toast';
 
-interface DashboardStats {
-  totalEquipment: number;
-  availableEquipment: number;
-  totalSchedulings: number;
-  activeSchedulings: number;
-  totalUsers: number;
-}
-
-interface RecentScheduling {
-  id: string;
-  start_date: string;
-  equipment: { name: string };
-  user: { full_name: string };
-  status: 'scheduled' | 'completed' | 'cancelled';
+interface EnrichedScheduling extends RecentScheduling {
+  equipment?: Equipment;
+  user?: User;
 }
 
 export default function DashboardPage() {
-  const [stats, setStats] = useState<DashboardStats>({
-    totalEquipment: 0,
-    availableEquipment: 0,
-    totalSchedulings: 0,
-    activeSchedulings: 0,
-    totalUsers: 0,
-  });
-  const [recentSchedulings, setRecentSchedulings] = useState<RecentScheduling[]>([]);
+  const [stats, setStats] = useState<DashboardStats | null>(null);
+  const [recentSchedulings, setRecentSchedulings] = useState<EnrichedScheduling[]>([]);
+  const [loading, setLoading] = useState(true);
+  const { profile } = useAuthContext();
+  const { toast } = useToast();
 
   useEffect(() => {
-    loadDashboardData();
-  }, []);
+    if (profile) {
+      loadDashboardData();
+    }
+  }, [profile]);
 
   const loadDashboardData = async () => {
-    await new Promise(resolve => setTimeout(resolve, 300));
+    try {
+      setLoading(true);
 
-    const total = mockEquipment.length;
-    const available = mockEquipment.filter((e) => e.status === 'available').length;
-    
-    const totalSchedulings = mockScheduling.length;
-    const activeSchedulings = mockScheduling.filter((s) => s.status === 'scheduled').length;
-    
-    const totalUsers = mockUsers.length;
+      // Buscar estatísticas do dashboard
+      const dashboardData = await dashboardService.getStats();
+      setStats(dashboardData.stats);
 
-    setStats({
-      totalEquipment: total,
-      availableEquipment: available,
-      totalSchedulings,
-      activeSchedulings,
-      totalUsers,
-    });
+      // Buscar equipamentos e usuários para enriquecer os agendamentos recentes
+      const [equipments, users] = await Promise.all([
+        equipmentsService.list(),
+        usersService.list(),
+      ]);
 
-    const recentSchedulingsData = mockScheduling
-      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
-      .slice(0, 5)
-      .map((s) => ({
-        id: s.id,
-        start_date: s.start_date,
-        status: s.status as 'scheduled' | 'completed' | 'cancelled',
-        equipment: { name: mockEquipment.find(e => e.id === s.equipment_id)?.name || 'N/A' },
-        user: { full_name: mockUsers.find(u => u.id === s.user_id)?.full_name || 'N/A' },
+      // Enriquecer agendamentos recentes com dados de equipamento e usuário
+      const enrichedSchedulings = dashboardData.recentSchedulings.map(scheduling => ({
+        ...scheduling,
+        equipment: equipments.find(e => e.id === scheduling.equipmentId),
+        user: users.find(u => u.id === scheduling.userId),
       }));
-    
-    setRecentSchedulings(recentSchedulingsData);
+
+      setRecentSchedulings(enrichedSchedulings);
+    } catch (error) {
+      console.error('Erro ao carregar dados do dashboard:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Erro ao carregar dashboard',
+        description: 'Não foi possível carregar os dados do dashboard. Tente novamente.',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const getStatusBadge = (status: 'scheduled' | 'completed' | 'cancelled') => {
-    const variants = {
-      scheduled: { variant: 'warning' as const, label: 'Agendado' },
-      completed: { variant: 'success' as const, label: 'Concluído' },
-      cancelled: { variant: 'danger' as const, label: 'Cancelado' },
+  const getStatusBadge = (status: string) => {
+    const variants: Record<string, { variant: 'success' | 'warning' | 'danger' | 'info'; label: string }> = {
+      SCHEDULED: { variant: 'warning', label: 'Agendado' },
+      CONFIRMED: { variant: 'info', label: 'Confirmado' },
+      COMPLETED: { variant: 'success', label: 'Concluído' },
+      CANCELLED: { variant: 'danger', label: 'Cancelado' },
     };
-    const config = variants[status];
+    const config = variants[status] || { variant: 'warning' as const, label: status };
     return <StatusBadge variant={config.variant}>{config.label}</StatusBadge>;
   };
+
+  if (loading || !stats) {
+    return (
+      <MainLayout>
+        <PageHeader
+          title="Dashboard"
+          description="Visão geral do sistema escolar"
+        />
+        <div className="flex items-center justify-center min-h-[50vh]">
+          <div className="text-slate-600">Carregando...</div>
+        </div>
+      </MainLayout>
+    );
+  }
 
   return (
     <MainLayout>
@@ -111,13 +119,17 @@ export default function DashboardPage() {
         />
         <StatCard
           title="Usuários Cadastrados"
-          value={stats.totalUsers}
+          value={stats.activeUsers}
           icon={Users}
           iconColor="text-purple-600"
+          trend={{
+            value: `${stats.totalUsers} total`,
+            isPositive: true,
+          }}
         />
         <StatCard
           title="Taxa de Uso"
-          value={`${stats.totalEquipment > 0 ? Math.round(((stats.totalEquipment - stats.availableEquipment) / stats.totalEquipment) * 100) : 0}%`}
+          value={`${stats.usageRate}%`}
           icon={TrendingUp}
           iconColor="text-orange-600"
         />
@@ -139,16 +151,16 @@ export default function DashboardPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-medium text-slate-900">
-                        {scheduling.equipment.name}
+                        {scheduling.equipment?.name || 'Equipamento N/A'}
                       </h3>
                       {getStatusBadge(scheduling.status)}
                     </div>
                     <p className="text-sm text-slate-600">
-                      Usuário: {scheduling.user.full_name}
+                      Usuário: {scheduling.user?.fullName || 'N/A'}
                     </p>
                   </div>
                   <div className="text-right text-sm text-slate-500">
-                    {new Date(scheduling.start_date).toLocaleDateString('pt-BR', {
+                    {new Date(scheduling.startDate).toLocaleDateString('pt-BR', {
                       day: '2-digit',
                       month: 'short',
                       hour: '2-digit',

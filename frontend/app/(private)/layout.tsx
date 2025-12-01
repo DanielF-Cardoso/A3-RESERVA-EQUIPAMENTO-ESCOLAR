@@ -2,14 +2,14 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuthContext } from '@/hooks/useAuthContext';
 
 export default function PrivateLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { user, loading } = useAuth();
+  const { user, loading } = useAuthContext();
   const router = useRouter();
 
   useEffect(() => {

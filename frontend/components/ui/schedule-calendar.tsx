@@ -67,6 +67,14 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
     );
   };
 
+  const isPastDate = (day: number) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dateToCheck = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+    dateToCheck.setHours(0, 0, 0, 0);
+    return dateToCheck < today;
+  };
+
   const renderCalendarDays = () => {
     const days = [];
 
@@ -77,16 +85,23 @@ export function ScheduleCalendar({ events, onDateClick, onEventClick }: Schedule
     for (let day = 1; day <= daysInMonth; day++) {
       const dayEvents = getEventsForDate(day);
       const today = isToday(day);
+      const isPast = isPastDate(day);
 
       days.push(
         <div
           key={day}
           onClick={() => onDateClick(new Date(currentDate.getFullYear(), currentDate.getMonth(), day))}
           className={`h-20 sm:h-28 lg:h-32 border border-slate-200 p-1 sm:p-2 cursor-pointer hover:bg-slate-50 transition-colors ${
-            today ? 'bg-blue-50 border-blue-300' : 'bg-white'
+            isPast 
+              ? 'bg-slate-100 opacity-60' 
+              : today 
+              ? 'bg-blue-50 border-blue-300' 
+              : 'bg-white'
           }`}
         >
-          <div className={`text-xs sm:text-sm font-medium mb-1 ${today ? 'text-blue-600' : 'text-slate-700'}`}>
+          <div className={`text-xs sm:text-sm font-medium mb-1 ${
+            isPast ? 'text-slate-400' : today ? 'text-blue-600' : 'text-slate-700'
+          }`}>
             {day}
           </div>
           <div className="space-y-1 overflow-hidden">

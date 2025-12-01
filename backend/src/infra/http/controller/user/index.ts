@@ -1,0 +1,6 @@
+export { AuthenticateUserController } from './authenticate-user.controller'
+export { CreateUserController } from './create-user.controller'
+export { GetUserProfileController } from './get-user-profile.controller'
+export { ListUsersController } from './list-users.controller'
+export { InactivateUserController } from './inactivate-user.controller'
+export { UpdateUserProfileController } from './update-user-profile.controller'

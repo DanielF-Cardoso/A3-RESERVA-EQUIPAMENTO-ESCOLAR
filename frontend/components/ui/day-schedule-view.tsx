@@ -47,6 +47,13 @@ export function DayScheduleView({
     return `${weekDays[date.getDay()]}, ${date.getDate()} de ${monthNames[date.getMonth()]} de ${date.getFullYear()}`;
   };
 
+  const isPastDateTime = (hour: number) => {
+    const now = new Date();
+    const checkDateTime = new Date(date);
+    checkDateTime.setHours(hour, 0, 0, 0);
+    return checkDateTime < now;
+  };
+
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2 sm:p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] flex flex-col">
@@ -70,6 +77,7 @@ export function DayScheduleView({
             {hours.map((hour) => {
               const hourEvents = getEventsForHour(hour);
               const hasEvents = hourEvents.length > 0;
+              const isPast = isPastDateTime(hour);
 
               return (
                 <div
@@ -80,7 +88,9 @@ export function DayScheduleView({
                 >
                   {/* Time Column */}
                   <div className="w-16 sm:w-24 p-2 sm:p-4 border-r border-slate-200 flex items-start flex-shrink-0">
-                    <span className="text-xs sm:text-sm font-medium text-slate-700">
+                    <span className={`text-xs sm:text-sm font-medium ${
+                      isPast ? 'text-slate-500' : 'text-slate-700'
+                    }`}>
                       {hour.toString().padStart(2, '0')}:00
                     </span>
                   </div>
@@ -102,14 +112,16 @@ export function DayScheduleView({
                           </div>
                         </div>
                       ))}
-                      {/* Botão de adicionar sempre visível */}
-                      <button
-                        onClick={() => onTimeSlotClick(hour)}
-                        className="w-full p-2 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400 hover:text-slate-600 hover:border-slate-400 transition-colors group"
-                      >
-                        <Plus size={16} className="sm:size-18 group-hover:scale-110 transition-transform" />
-                        <span className="ml-1 sm:ml-2 text-xs sm:text-sm">Adicionar</span>
-                      </button>
+                      {/* Botão de adicionar apenas para horários futuros */}
+                      {!isPast && (
+                        <button
+                          onClick={() => onTimeSlotClick(hour)}
+                          className="w-full p-2 border-2 border-dashed border-slate-300 rounded-lg flex items-center justify-center text-slate-400 hover:text-slate-600 hover:border-slate-400 transition-colors group"
+                        >
+                          <Plus size={16} className="sm:size-18 group-hover:scale-110 transition-transform" />
+                          <span className="ml-1 sm:ml-2 text-xs sm:text-sm">Adicionar</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

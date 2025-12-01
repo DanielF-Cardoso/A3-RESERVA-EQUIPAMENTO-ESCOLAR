@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "logs/.6644f13da61fd1c205e9ca2aab975ba834e7bec6-audit.json",
+    "files": [
+        {
+            "date": 1763472540006,
+            "name": "logs/school-equip-mgmt-2025-11-18-error.log",
+            "hash": "58ab832fdcd2b9436252aabe2a46889dabc474f739a8d76e9135d8de94db4df6"
+        },
+        {
+            "date": 1764003898372,
+            "name": "logs/school-equip-mgmt-2025-11-24-error.log",
+            "hash": "2040f1f0747afaec288ae66efabc52723eda51477cbd379a24e07fec2309ec75"
+        },
+        {
+            "date": 1764165462279,
+            "name": "logs/school-equip-mgmt-2025-11-26-error.log",
+            "hash": "02890768cc48c5b169ec12ea8f06b99c967a80bc98abf8ff4cb1d5b738e04010"
+        },
+        {
+            "date": 1764593080701,
+            "name": "logs/school-equip-mgmt-2025-12-01-error.log",
+            "hash": "749c99b3e9e5b269913be965420f13b72af9f7fb42732d0dcb42f4cb653d0e41"
+        }
+    ],
+    "hashType": "sha256"
+}

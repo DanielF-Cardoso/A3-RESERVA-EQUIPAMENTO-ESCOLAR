@@ -1,0 +1,6 @@
+export { AuthenticateUserDTO } from './authenticate-user.dto'
+export { CreateUserDTO } from './create-user.dto'
+export { UpdateUserProfileDTO } from './update-user-profile.dto'
+export { ForgotPasswordDTO } from './forgot-password.dto'
+export { ResetPasswordDTO } from './reset-password.dto'
+export { UpdatePasswordDTO } from './update-password.dto'

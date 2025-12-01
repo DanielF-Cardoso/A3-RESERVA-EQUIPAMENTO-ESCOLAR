@@ -1,0 +1,402 @@
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.064Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.063Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.061Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.216Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.217Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.234Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.245Z] [INFO]  [InactivateEquipmentService] Inactivating equipment 2b452c44-a552-4bac-861c-91b29ad6a571
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.247Z] [INFO]  [UpdateEquipmentService] Updating equipment 661fec0b-11ce-45fc-a58d-9b6b9ea2a7cb
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.253Z] [INFO]  [InactivateEquipmentService] Equipment 2b452c44-a552-4bac-861c-91b29ad6a571 inactivated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.256Z] [INFO]  [UpdateEquipmentService] Equipment 661fec0b-11ce-45fc-a58d-9b6b9ea2a7cb updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.264Z] [INFO]  [CreateEquipmentService] Creating equipment: Projetor Multimídia Epson (Audiovisual)
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.270Z] [INFO]  [CreateEquipmentService] Equipment created with id: f29031ab-fb2e-48e3-93d4-24718753d3b6
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.317Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.319Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.339Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.347Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.369Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.378Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.381Z] [INFO]  [UpdateEquipmentService] Updating equipment 5fa4c219-e0a5-4c2d-81cc-1480909ce092
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.384Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.387Z] [INFO]  [InactivateEquipmentService] Inactivating equipment 9eb3fa65-fd78-4245-b3cf-8fcdb8b1cfd8
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.395Z] [INFO]  [UpdateEquipmentService] Equipment 5fa4c219-e0a5-4c2d-81cc-1480909ce092 updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.396Z] [INFO]  [InactivateEquipmentService] Equipment 9eb3fa65-fd78-4245-b3cf-8fcdb8b1cfd8 inactivated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.396Z] [INFO]  [CreateEquipmentService] Creating equipment: Notebook Dell (Informática)
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.399Z] [INFO]  [CreateEquipmentService] Equipment created with id: ec53ad81-57eb-40d8-a294-4ff7d161d901
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.408Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.409Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.430Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment 37c5eb7e-4682-4dc9-a5ce-d71d671e11ca as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.437Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment 37c5eb7e-4682-4dc9-a5ce-d71d671e11ca marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.441Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.441Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.462Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.484Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.484Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.494Z] [INFO]  [InactivateEquipmentService] Inactivating equipment non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.495Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.496Z] [INFO]  [UpdateEquipmentService] Updating equipment non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.497Z] [WARN]  [InactivateEquipmentService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.498Z] [WARN]  [UpdateEquipmentService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.506Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.514Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.514Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.541Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.550Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment 893351c8-ba8a-4308-a24c-1df28e30de02 as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.556Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment 893351c8-ba8a-4308-a24c-1df28e30de02 marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.561Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin4@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.595Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin4@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.598Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.604Z] [INFO]  [UpdateEquipmentService] Updating equipment ac4cd0c0-9e85-41a5-9970-0e5c5918ea93
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.611Z] [INFO]  [UpdateEquipmentService] Equipment ac4cd0c0-9e85-41a5-9970-0e5c5918ea93 updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.640Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.649Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment non-existent-id as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.652Z] [WARN]  [MarkEquipmentAsMaintenanceService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.666Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.712Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin4@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.748Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin4@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.756Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment a102aa60-6a03-48bb-9afc-4e771be55647 as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:43.762Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment a102aa60-6a03-48bb-9afc-4e771be55647 marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.466Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.502Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.514Z] [INFO]  [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.517Z] [INFO]  [ListEquipmentsService] Found 2 equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.526Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.560Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.587Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.592Z] [INFO]  [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:57:47.593Z] [INFO]  [ListEquipmentsService] Found 4 equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.799Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin-inactivate@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.827Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.846Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin-inactivate@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.866Z] [INFO]  [InactivateUserService] Fetching user for inactivation, with id: 3f0b86d0-8aa7-4b16-a408-4590cb52fac4
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.874Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.881Z] [INFO]  [InactivateUserService] User inactivated with id: 3f0b86d0-8aa7-4b16-a408-4590cb52fac4
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.879Z] [INFO]  [AuthenticateUserService] Authenticating user with email: profile@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.895Z] [INFO]  [CreateUserService] Starting user creation for email: joao.silva@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.926Z] [INFO]  [AuthenticateUserService] Authenticating user with email: self-inactivate@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.929Z] [INFO]  [AuthenticateUserService] User authenticated successfully: profile@escola.com with role: STAFF
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.935Z] [INFO]  [CreateUserService] User created successfully with email: joao.silva@escola.com and role: TEACHER
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.947Z] [INFO]  [GetUserProfileService] Fetching profile for userId: cd865345-967a-4d8f-8c28-6839890438c4
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.945Z] [INFO]  [AuthenticateUserService] Authenticating user with email: test@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.950Z] [INFO]  [GetUserProfileService] User profile found for userId: cd865345-967a-4d8f-8c28-6839890438c4
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.964Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.965Z] [INFO]  [AuthenticateUserService] User authenticated successfully: self-inactivate@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.972Z] [INFO]  [InactivateUserService] Fetching user for inactivation, with id: 9d00b03a-8925-4815-ace4-7a9edd39c375
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.974Z] [WARN]  [InactivateUserService] Attempted to inactivate own account: userId: 9d00b03a-8925-4815-ace4-7a9edd39c375
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.986Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:07.999Z] [INFO]  [AuthenticateUserService] User authenticated successfully: test@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.015Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin-notfound@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.023Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.033Z] [INFO]  [CreateUserService] Starting user creation for email: existing@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.036Z] [WARN]  [CreateUserService] User already exists with email: existing@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.055Z] [INFO]  [AuthenticateUserService] Authenticating user with email: test2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.055Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin-notfound@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.069Z] [INFO]  [InactivateUserService] Fetching user for inactivation, with id: non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.072Z] [WARN]  [InactivateUserService] User not found for userId: non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.091Z] [WARN]  [AuthenticateUserService] Authentication failed: Invalid password for email: test2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.133Z] [INFO]  [AuthenticateUserService] Authenticating user with email: inactive@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:08.136Z] [WARN]  [AuthenticateUserService] Authentication failed: Inactive user for email: inactive@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.252Z] [INFO]  [AuthenticateUserService] Authenticating user with email: update-profile@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.299Z] [INFO]  [AuthenticateUserService] User authenticated successfully: update-profile@escola.com with role: TEACHER
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.321Z] [INFO]  [UpdateUserProfileService] Attempting to update profile for userId: 96ebc639-7459-424e-bb8b-a31127954879
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.329Z] [INFO]  [UpdateUserProfileService] Profile updated successfully for userId: 96ebc639-7459-424e-bb8b-a31127954879
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.350Z] [INFO]  [AuthenticateUserService] Authenticating user with email: list-admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.374Z] [INFO]  [AuthenticateUserService] Authenticating user with email: old-email@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.402Z] [INFO]  [AuthenticateUserService] User authenticated successfully: list-admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.404Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.412Z] [INFO]  [AuthenticateUserService] User authenticated successfully: old-email@escola.com with role: TEACHER
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.421Z] [INFO]  [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.422Z] [INFO]  [UpdateUserProfileService] Attempting to update profile for userId: 781149d3-6cad-4357-93dd-6fee23253b1d
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.424Z] [INFO]  [ListUsersService] Found 3 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.428Z] [INFO]  [UpdateUserProfileService] Profile updated successfully for userId: 781149d3-6cad-4357-93dd-6fee23253b1d
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.434Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.450Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.468Z] [INFO]  [AuthenticateUserService] Authenticating user with email: remove-phone@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.479Z] [INFO]  [UpdateEquipmentService] Updating equipment 3e084b83-433c-409e-ac34-136682b214dd
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.483Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.490Z] [INFO]  [UpdateEquipmentService] Equipment 3e084b83-433c-409e-ac34-136682b214dd updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.511Z] [INFO]  [AuthenticateUserService] User authenticated successfully: remove-phone@escola.com with role: TEACHER
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.521Z] [INFO]  [UpdateUserProfileService] Attempting to update profile for userId: da48eb37-2f6d-4cea-9691-e3b2f7ce6246
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.525Z] [INFO]  [UpdateUserProfileService] Profile updated successfully for userId: da48eb37-2f6d-4cea-9691-e3b2f7ce6246
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.536Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.538Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.554Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment 6b4cc8b5-616c-4ff8-ace1-c73bd804fa2e as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.561Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment 6b4cc8b5-616c-4ff8-ace1-c73bd804fa2e marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.567Z] [INFO]  [AuthenticateUserService] Authenticating user with email: user1@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.573Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.579Z] [INFO]  [UpdateEquipmentService] Updating equipment a0ebd1d5-baa1-4765-8d50-bb55701cb7ab
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.585Z] [INFO]  [UpdateEquipmentService] Equipment a0ebd1d5-baa1-4765-8d50-bb55701cb7ab updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.601Z] [INFO]  [AuthenticateUserService] User authenticated successfully: user1@escola.com with role: TEACHER
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.607Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.608Z] [INFO]  [UpdateUserProfileService] Attempting to update profile for userId: 4fa1f7d7-07ba-4672-a976-0d9f5512873f
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.612Z] [WARN]  [UpdateUserProfileService] Email existing-user@escola.com already in use during profile update for userId: 4fa1f7d7-07ba-4672-a976-0d9f5512873f
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.622Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.644Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.652Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment 31950112-06cb-4ce9-a71d-c25e880e25e8 as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.661Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment 31950112-06cb-4ce9-a71d-c25e880e25e8 marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.666Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.678Z] [INFO]  [UpdateEquipmentService] Updating equipment non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.682Z] [WARN]  [UpdateEquipmentService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.699Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.706Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.744Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin4@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.747Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.755Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment non-existent-id as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.758Z] [WARN]  [MarkEquipmentAsMaintenanceService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.774Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.784Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin4@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.791Z] [INFO]  [UpdateEquipmentService] Updating equipment a0eb3e4c-746f-4f59-86be-cb9c82fe1c66
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.796Z] [INFO]  [UpdateEquipmentService] Equipment a0eb3e4c-746f-4f59-86be-cb9c82fe1c66 updated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.822Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin4@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.857Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin4@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.866Z] [INFO]  [MarkEquipmentAsMaintenanceService] Marking equipment 3bdad59c-5c8c-45d1-895e-ec37d59efbf8 as maintenance
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:14.871Z] [INFO]  [MarkEquipmentAsMaintenanceService] Equipment 3bdad59c-5c8c-45d1-895e-ec37d59efbf8 marked as maintenance successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.096Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.136Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.144Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.167Z] [INFO]  [CreateEquipmentService] Creating equipment: Projetor Multimídia Epson (Audiovisual)
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.172Z] [INFO]  [CreateEquipmentService] Equipment created with id: 03ef0c2b-d84e-41a1-8f83-c152916f6281
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.180Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.200Z] [INFO]  [InactivateEquipmentService] Inactivating equipment 4e528b3e-a261-428c-b76f-0374838b1a58
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.208Z] [INFO]  [InactivateEquipmentService] Equipment 4e528b3e-a261-428c-b76f-0374838b1a58 inactivated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.218Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.252Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.254Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.262Z] [INFO]  [CreateEquipmentService] Creating equipment: Notebook Dell (Informática)
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.259Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.266Z] [INFO]  [CreateEquipmentService] Equipment created with id: 10ac32a4-9582-41c7-8085-c3defe44be35
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.273Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.290Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.296Z] [INFO]  [InactivateEquipmentService] Inactivating equipment 48ef30c1-af7f-4791-9ac2-0cb18ff79164
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.301Z] [INFO]  [InactivateEquipmentService] Equipment 48ef30c1-af7f-4791-9ac2-0cb18ff79164 inactivated successfully
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.307Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.311Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.323Z] [INFO]  [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.327Z] [INFO]  [ListEquipmentsService] Found 2 equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.338Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.339Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin3@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.346Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.382Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin3@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.391Z] [INFO]  [InactivateEquipmentService] Inactivating equipment non-existent-id
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.392Z] [INFO]  [AuthenticateUserService] Authenticating user with email: admin2@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.394Z] [WARN]  [InactivateEquipmentService] Equipment non-existent-id not found
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.406Z] [WARN]  [JwtAuthGuard] Unauthorized access attempt
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.427Z] [INFO]  [AuthenticateUserService] User authenticated successfully: admin2@escola.com with role: ADMIN
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.434Z] [INFO]  [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T13:58:20.437Z] [INFO]  [ListEquipmentsService] Found 4 equipments
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.593Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.599Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.599Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.600Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.600Z] [INFO]  [InstanceLoader] MailerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.601Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.601Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.601Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.602Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.603Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.604Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.605Z] [INFO]  [InstanceLoader] MailerCoreModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.605Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.606Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.606Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.607Z] [INFO]  [InstanceLoader] EmailModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.608Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.609Z] [INFO]  [InstanceLoader] EventsModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.609Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.610Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.611Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.611Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.612Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.612Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.613Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.613Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.613Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.613Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.614Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.614Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.614Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.614Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.615Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.616Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.616Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.616Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.616Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.616Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.617Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.618Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.618Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.618Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:21:47.618Z] [INFO]  [NestApplication] Nest application successfully started
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.396Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.399Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.399Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.400Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.400Z] [INFO]  [InstanceLoader] MailerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.400Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.401Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.401Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.401Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.402Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.402Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.403Z] [INFO]  [InstanceLoader] MailerCoreModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.403Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.403Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.403Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.403Z] [INFO]  [InstanceLoader] EmailModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.404Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.404Z] [INFO]  [InstanceLoader] EventsModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.404Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.405Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.405Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.405Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.405Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.406Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.406Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.406Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.406Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.407Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.408Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.408Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.408Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.408Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.409Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:22:46.410Z] [INFO]  [NestApplication] Nest application successfully started
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.107Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.113Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.113Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.113Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.113Z] [INFO]  [InstanceLoader] MailerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.114Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.114Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.114Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.114Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.115Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.115Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.115Z] [INFO]  [InstanceLoader] MailerCoreModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.115Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.116Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.116Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.116Z] [INFO]  [InstanceLoader] EmailModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.117Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.117Z] [INFO]  [InstanceLoader] EventsModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.118Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.118Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.118Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.119Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.120Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.121Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.122Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.123Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.123Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.123Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.123Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:25:51.123Z] [INFO]  [NestApplication] Nest application successfully started
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.726Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.729Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.730Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.730Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.730Z] [INFO]  [InstanceLoader] MailerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.731Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.731Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.731Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.731Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.732Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.733Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.733Z] [INFO]  [InstanceLoader] MailerCoreModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.734Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.734Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.734Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.734Z] [INFO]  [InstanceLoader] EmailModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.734Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.735Z] [INFO]  [InstanceLoader] EventsModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.735Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.735Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.735Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.736Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.737Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-26T22:32:09.739Z] [INFO]  [NestApplication] Nest application successfully started

@@ -1,0 +1,34 @@
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.526Z] [INFO]  [Bootstrap] Swagger documentation disabled in production
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.682Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.683Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.684Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.684Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.685Z] [INFO]  [InstanceLoader] MailerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.686Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.687Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.688Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.702Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.703Z] [INFO]  [InstanceLoader] MailerCoreModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.704Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.705Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.708Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.709Z] [INFO]  [InstanceLoader] EmailModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.710Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.711Z] [INFO]  [InstanceLoader] I18nModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.711Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.712Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.713Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.714Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.723Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.727Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.728Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.732Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.733Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.735Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.736Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.736Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.737Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.737Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.737Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.738Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-11-24T17:04:58.738Z] [INFO]  [NestApplication] Nest application successfully started

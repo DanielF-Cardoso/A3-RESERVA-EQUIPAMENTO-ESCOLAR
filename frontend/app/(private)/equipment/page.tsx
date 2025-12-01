@@ -1,23 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Plus, Edit, Trash2, Wrench } from 'lucide-react';
+import { Plus, Edit, Trash2, Wrench, AlertCircle } from 'lucide-react';
 import { MainLayout } from '@/components/layout/main-layout';
 import { PageHeader } from '@/components/ui/page-header';
 import { DataTable } from '@/components/ui/data-table';
 import { StatusBadge } from '@/components/ui/status-badge';
 import { Modal } from '@/components/ui/modal';
-import { mockEquipment } from '@/lib/mock-data';
+import { equipmentsService, Equipment } from '@/lib/services/equipments.service';
+import { useAuthContext } from '@/hooks/useAuthContext';
+import { useRouter } from 'next/navigation';
+import { useToast } from '@/hooks/use-toast';
 
-interface Equipment {
-  id: string;
-  name: string;
-  type: string;
-  status: 'available' | 'in_use' | 'maintenance';
-  description: string | null;
-  location: string | null;
-  quantity: number;
-}
+type EquipmentStatus = 'AVAILABLE' | 'IN_USE' | 'MAINTENANCE';
 
 export default function EquipmentPage() {
   const [equipment, setEquipment] = useState<Equipment[]>([]);
@@ -26,23 +21,46 @@ export default function EquipmentPage() {
   const [modalMode, setModalMode] = useState<'create' | 'edit'>('create');
   const [selectedEquipment, setSelectedEquipment] = useState<Equipment | null>(null);
   const [loading, setLoading] = useState(false);
+  const { user, profile } = useAuthContext();
+  const router = useRouter();
+  const { toast } = useToast();
 
   const [formData, setFormData] = useState({
     name: '',
     type: '',
-    status: 'available' as Equipment['status'],
+    status: 'AVAILABLE' as EquipmentStatus,
     description: '',
     location: '',
     quantity: 1,
   });
 
   useEffect(() => {
-    loadEquipment();
-  }, []);
+    // Verificar se o usuário tem permissão ADMIN
+    if (profile && profile.role.toLowerCase() !== 'admin') {
+      router.push('/dashboard');
+      return;
+    }
+
+    if (profile?.role && profile.role.toLowerCase() === 'admin') {
+      loadEquipment();
+    }
+  }, [profile, router]);
 
   const loadEquipment = async () => {
-    await new Promise(resolve => setTimeout(resolve, 300));
-    setEquipment(mockEquipment);
+    try {
+      setLoading(true);
+      const data = await equipmentsService.list();
+      setEquipment(data.filter(eq => eq.isActive));
+    } catch (error) {
+      console.error('Erro ao carregar equipamentos:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Erro ao carregar equipamentos',
+        description: 'Não foi possível carregar a lista de equipamentos. Tente novamente.',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const openCreateModal = () => {
@@ -50,7 +68,7 @@ export default function EquipmentPage() {
     setFormData({
       name: '',
       type: '',
-      status: 'available',
+      status: 'AVAILABLE',
       description: '',
       location: '',
       quantity: 1,
@@ -77,55 +95,92 @@ export default function EquipmentPage() {
     setLoading(true);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
       if (modalMode === 'create') {
-        const newEquipment: Equipment = {
-          id: String(Date.now()),
+        await equipmentsService.create({
           name: formData.name,
           type: formData.type,
           status: formData.status,
-          description: formData.description || null,
-          location: formData.location || null,
-          quantity: formData.quantity,
-        };
-        setEquipment(prev => [newEquipment, ...prev]);
+          description: formData.description || undefined,
+          location: formData.location || undefined,
+          quantity: Number(formData.quantity), // Converter para número
+        });
       } else if (selectedEquipment) {
-        setEquipment(prev => prev.map(item => 
-          item.id === selectedEquipment.id 
-            ? {
-                ...item,
-                name: formData.name,
-                type: formData.type,
-                status: formData.status,
-                description: formData.description || null,
-                location: formData.location || null,
-                quantity: formData.quantity,
-              }
-            : item
-        ));
+        await equipmentsService.update(selectedEquipment.id, {
+          name: formData.name,
+          type: formData.type,
+          status: formData.status,
+          description: formData.description || undefined,
+          location: formData.location || undefined,
+          quantity: Number(formData.quantity), // Converter para número
+        });
       }
 
+      await loadEquipment();
       setIsModalOpen(false);
-    } catch (error) {
-      console.error('Error saving equipment:', error);
+      toast({
+        title: modalMode === 'create' ? 'Equipamento criado!' : 'Equipamento atualizado!',
+        description: modalMode === 'create' 
+          ? 'O equipamento foi cadastrado com sucesso.' 
+          : 'As alterações foram salvas com sucesso.',
+      });
+    } catch (error: any) {
+      console.error('Erro ao salvar equipamento:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Erro ao salvar equipamento',
+        description: error.message || 'Não foi possível salvar o equipamento. Tente novamente.',
+      });
     } finally {
       setLoading(false);
     }
   };
 
   const handleDelete = async (id: string) => {
-    if (confirm('Tem certeza que deseja excluir este equipamento?')) {
-      await new Promise(resolve => setTimeout(resolve, 300));
-      setEquipment(prev => prev.filter(item => item.id !== id));
+    if (confirm('Tem certeza que deseja inativar este equipamento?')) {
+      try {
+        await equipmentsService.inactivate(id);
+        await loadEquipment();
+        toast({
+          title: 'Equipamento inativado!',
+          description: 'O equipamento foi inativado com sucesso.',
+        });
+      } catch (error: any) {
+        console.error('Erro ao inativar equipamento:', error);
+        toast({
+          variant: 'destructive',
+          title: 'Erro ao inativar equipamento',
+          description: error.message || 'Não foi possível inativar o equipamento. Tente novamente.',
+        });
+      }
     }
   };
 
   const handleMaintenanceToggle = async (item: Equipment) => {
-    const newStatus = item.status === 'maintenance' ? 'available' : 'maintenance';
-    setEquipment(prev => prev.map(eq => 
-      eq.id === item.id ? { ...eq, status: newStatus } : eq
-    ));
+    try {
+      if (item.status === 'MAINTENANCE') {
+        // Se está em manutenção, marcar como disponível
+        await equipmentsService.markAsAvailable(item.id);
+        toast({
+          title: 'Status atualizado!',
+          description: 'O equipamento foi marcado como disponível.',
+        });
+      } else {
+        // Se não está em manutenção, marcar como manutenção
+        await equipmentsService.markAsMaintenance(item.id);
+        toast({
+          title: 'Status atualizado!',
+          description: 'O equipamento foi marcado como em manutenção.',
+        });
+      }
+      await loadEquipment();
+    } catch (error: any) {
+      console.error('Erro ao alterar status:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Erro ao alterar status',
+        description: error.message || 'Não foi possível alterar o status do equipamento. Tente novamente.',
+      });
+    }
   };
 
   const filteredEquipment = equipment.filter(
@@ -135,11 +190,11 @@ export default function EquipmentPage() {
       item.location?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const getStatusBadge = (status: Equipment['status']) => {
-    const variants: Record<Equipment['status'], { variant: 'success' | 'warning' | 'danger'; label: string }> = {
-      available: { variant: 'success', label: 'Disponível' },
-      in_use: { variant: 'warning', label: 'Em Uso' },
-      maintenance: { variant: 'danger', label: 'Manutenção' },
+  const getStatusBadge = (status: EquipmentStatus) => {
+    const variants: Record<EquipmentStatus, { variant: 'success' | 'warning' | 'danger'; label: string }> = {
+      AVAILABLE: { variant: 'success', label: 'Disponível' },
+      IN_USE: { variant: 'warning', label: 'Em Uso' },
+      MAINTENANCE: { variant: 'danger', label: 'Manutenção' },
     };
     const config = variants[status];
     return <StatusBadge variant={config.variant}>{config.label}</StatusBadge>;
@@ -152,6 +207,33 @@ export default function EquipmentPage() {
     { header: 'Status', accessor: (item: Equipment) => getStatusBadge(item.status) },
     { header: 'Localização', accessor: (item: Equipment) => item.location || '-' },
   ];
+
+  // Mostrar mensagem de acesso negado se não for ADMIN
+  if (profile && profile.role.toLowerCase() !== 'admin') {
+    return (
+      <MainLayout>
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+              <AlertCircle size={32} className="text-red-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Acesso Negado</h2>
+            <p className="text-slate-600 mb-6">
+              Você não tem permissão para acessar esta página.
+              <br />
+              Apenas administradores podem gerenciar equipamentos.
+            </p>
+            <button
+              onClick={() => router.push('/dashboard')}
+              className="px-6 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+            >
+              Voltar ao Dashboard
+            </button>
+          </div>
+        </div>
+      </MainLayout>
+    );
+  }
 
   return (
     <MainLayout>
@@ -181,8 +263,12 @@ export default function EquipmentPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => handleMaintenanceToggle(item)}
-              className="p-2 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
-              title={item.status === 'maintenance' ? 'Marcar como disponível' : 'Marcar como manutenção'}
+              className={`p-2 rounded-lg transition-colors ${
+                item.status === 'MAINTENANCE'
+                  ? 'text-green-600 hover:bg-green-50'
+                  : 'text-yellow-600 hover:bg-yellow-50'
+              }`}
+              title={item.status === 'MAINTENANCE' ? 'Marcar como disponível' : 'Marcar como manutenção'}
             >
               <Wrench size={18} />
             </button>
@@ -196,7 +282,7 @@ export default function EquipmentPage() {
             <button
               onClick={() => handleDelete(item.id)}
               className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-              title="Excluir"
+              title="Inativar"
             >
               <Trash2 size={18} />
             </button>
@@ -256,12 +342,12 @@ export default function EquipmentPage() {
             </label>
             <select
               value={formData.status}
-              onChange={(e) => setFormData({ ...formData, status: e.target.value as Equipment['status'] })}
+              onChange={(e) => setFormData({ ...formData, status: e.target.value as EquipmentStatus })}
               className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500"
             >
-              <option value="available">Disponível</option>
-              <option value="in_use">Em Uso</option>
-              <option value="maintenance">Manutenção</option>
+              <option value="AVAILABLE">Disponível</option>
+              <option value="IN_USE">Em Uso</option>
+              <option value="MAINTENANCE">Manutenção</option>
             </select>
           </div>
 

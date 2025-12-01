@@ -1,15 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { LayoutDashboard, Package, Calendar, Users, LogOut, GraduationCap, LaptopMinimal } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuthContext } from '@/hooks/useAuthContext';
 
-const navigation = [
-  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-  { name: 'Equipamentos', href: '/equipment', icon: LaptopMinimal },
-  { name: 'Agendamentos', href: '/scheduling', icon: Calendar },
-  { name: 'Usuários', href: '/users', icon: Users },
+const allNavigation = [
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['admin', 'staff', 'teacher'] },
+  { name: 'Equipamentos', href: '/equipment', icon: LaptopMinimal, roles: ['admin'] },
+  { name: 'Agendamentos', href: '/scheduling', icon: Calendar, roles: ['admin', 'staff', 'teacher'] },
+  { name: 'Usuários', href: '/users', icon: Users, roles: ['admin'] },
 ];
 
 interface SidebarProps {
@@ -19,10 +19,21 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen = true, onClose }: SidebarProps) {
   const pathname = usePathname();
-  const { profile, signOut } = useAuth();
+  const router = useRouter();
+  const { profile, signOut } = useAuthContext();
+
+  // Filtrar navegação baseado no role do usuário (convertendo para lowercase)
+  const navigation = allNavigation.filter(item => 
+    profile?.role && item.roles.includes(profile.role.toLowerCase())
+  );
 
   const handleLinkClick = () => {
     if (onClose) onClose();
+  };
+
+  const handleSignOut = async () => {
+    await signOut();
+    router.push('/auth');
   };
 
   return (
@@ -85,7 +96,7 @@ export function Sidebar({ isOpen = true, onClose }: SidebarProps) {
             </div>
           </div>
           <button
-            onClick={signOut}
+            onClick={handleSignOut}
             className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
           >
             <LogOut size={20} />

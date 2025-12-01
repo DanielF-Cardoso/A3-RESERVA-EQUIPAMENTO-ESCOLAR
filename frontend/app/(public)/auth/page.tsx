@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { GraduationCap, Mail, Lock, ArrowRight, BookOpen, Pencil, Apple, Calculator } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuthContext } from '@/hooks/useAuthContext';
+import { useToast } from '@/hooks/use-toast';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
@@ -11,7 +12,15 @@ export default function AuthPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const { signIn } = useAuth();
+  const { signIn, user, loading: authLoading } = useAuthContext();
+  const { toast } = useToast();
+
+  // Redirecionar se já estiver autenticado
+  useEffect(() => {
+    if (!authLoading && user) {
+      router.push('/dashboard');
+    }
+  }, [user, authLoading, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,20 +28,49 @@ export default function AuthPage() {
     setLoading(true);
 
     try {
-      const { error } = await signIn(email, password);
-      if (error) {
-        setError('Email ou senha inválidos');
+      const result = await signIn(email, password);
+      if (result.error) {
+        setError(result.error.message);
+        toast({
+          variant: 'destructive',
+          title: 'Erro ao fazer login',
+          description: result.error.message,
+        });
       } else {
+        toast({
+          title: 'Login realizado com sucesso!',
+          description: 'Redirecionando para o dashboard...',
+        });
         router.push('/dashboard');
       }
     } catch (err) {
-      setError('Erro ao fazer login. Tente novamente.');
+      const errorMessage = 'Erro inesperado. Tente novamente.';
+      setError(errorMessage);
+      toast({
+        variant: 'destructive',
+        title: 'Erro inesperado',
+        description: errorMessage,
+      });
+      console.error('Erro no login:', err);
     } finally {
       setLoading(false);
     }
   };
 
+  // Mostrar loading enquanto verifica autenticação
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-slate-900 mx-auto mb-4" />
+          <p className="text-slate-600">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 px-4 py-12 relative overflow-hidden">
       {/* Elementos decorativos*/}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -123,9 +161,11 @@ export default function AuthPage() {
 
             {/* Mensagem de erro */}
             {error && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm flex items-center gap-2 animate-in fade-in slide-in-from-top duration-300">
-                <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
-                {error}
+              <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm animate-in fade-in slide-in-from-top duration-300">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div className="whitespace-pre-line">{error}</div>
+                </div>
               </div>
             )}
 
@@ -158,5 +198,6 @@ export default function AuthPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

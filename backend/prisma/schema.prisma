@@ -1,0 +1,92 @@
+// Schema para Sistema de Reserva de Equipamentos Escolares
+// Prisma Schema Documentation: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  TEACHER // Professor - Pode fazer reservas
+  STAFF // Secretária - Pode gerenciar reservas
+  ADMIN // Coordenador - Acesso total ao sistema
+
+  @@map("user_role")
+}
+
+enum EquipmentStatus {
+  AVAILABLE // Equipamento disponível para reserva
+  IN_USE // Equipamento em uso no momento
+  MAINTENANCE // Equipamento em manutenção
+
+  @@map("equipment_status")
+}
+
+enum SchedulingStatus {
+  SCHEDULED // Agendamento criado, aguardando confirmação
+  CONFIRMED // Agendamento confirmado pela administração
+  COMPLETED // Agendamento concluído (equipamento foi devolvido)
+  CANCELLED // Agendamento cancelado
+
+  @@map("scheduling_status")
+}
+
+model User {
+  id        String    @id @default(uuid())
+  fullName  String    @map("full_name")
+  email     String    @unique
+  password  String
+  phone     String?
+  role      UserRole  @default(TEACHER)
+  isActive  Boolean   @default(true)
+  lastLogin DateTime? @map("last_login")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  schedulings Scheduling[]
+
+  @@map("users")
+}
+
+model Equipment {
+  id          String          @id @default(uuid())
+  name        String
+  type        String
+  description String?
+  location    String?
+  quantity    Int             @default(1)
+  status      EquipmentStatus @default(AVAILABLE)
+  isActive    Boolean         @default(true)
+  createdAt   DateTime        @default(now()) @map("created_at")
+  updatedAt   DateTime        @updatedAt @map("updated_at")
+
+  schedulings Scheduling[]
+
+  @@map("equipment")
+}
+
+model Scheduling {
+  id          String           @id @default(uuid())
+  equipmentId String           @map("equipment_id")
+  userId      String           @map("user_id")
+  startDate   DateTime         @map("start_date")
+  endDate     DateTime         @map("end_date")
+  quantity    Int              @default(1)
+  notes       String?
+  status      SchedulingStatus @default(SCHEDULED)
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  equipment Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([equipmentId])
+  @@index([userId])
+  @@index([startDate, endDate])
+  @@index([status])
+  @@map("schedulings")
+}

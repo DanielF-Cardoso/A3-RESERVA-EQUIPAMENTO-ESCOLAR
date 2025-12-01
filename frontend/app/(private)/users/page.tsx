@@ -162,10 +162,10 @@ export default function UsersPage() {
   );
 
   const getRoleBadge = (role: UserRole) => {
-    const variants: Record<UserRole, { variant: 'info' | 'warning' | 'danger'; label: string }> = {
+    const variants: Record<string, { variant: 'success' | 'warning' | 'danger' | 'info'; label: string }> = {
       TEACHER: { variant: 'info', label: 'Professor' },
-      STAFF: { variant: 'warning', label: 'Funcionário' },
-      ADMIN: { variant: 'danger', label: 'Administrador' },
+      STAFF: { variant: 'warning', label: 'Secretaria' },
+      ADMIN: { variant: 'danger', label: 'Coordenador' },
     };
     const config = variants[role];
     return <StatusBadge variant={config.variant}>{config.label}</StatusBadge>;
@@ -287,8 +287,8 @@ export default function UsersPage() {
               className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500"
             >
               <option value="TEACHER">Professor</option>
-              <option value="STAFF">Funcionário</option>
-              <option value="ADMIN">Administrador</option>
+              <option value="STAFF">Secretaria</option>
+              <option value="ADMIN">Coordenador</option>
             </select>
           </div>
 

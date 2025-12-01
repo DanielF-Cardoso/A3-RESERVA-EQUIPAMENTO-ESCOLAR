@@ -27,6 +27,19 @@ export function Sidebar({ isOpen = true, onClose }: SidebarProps) {
     profile?.role && item.roles.includes(profile.role.toLowerCase())
   );
 
+  // Traduzir roles para português
+  const translateRole = (role: string | undefined): string => {
+    if (!role) return 'usuário';
+    
+    const translations: Record<string, string> = {
+      'admin': 'Coordenador',
+      'staff': 'Secretaria',
+      'teacher': 'Professor',
+    };
+
+    return translations[role.toLowerCase()] || role;
+  };
+
   const handleLinkClick = () => {
     if (onClose) onClose();
   };
@@ -92,7 +105,7 @@ export function Sidebar({ isOpen = true, onClose }: SidebarProps) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium truncate">{profile?.full_name || profile?.email || 'Usuário'}</p>
-              <p className="text-xs text-slate-400 capitalize">{profile?.role?.toLowerCase() || 'usuário'}</p>
+              <p className="text-xs text-slate-400">{translateRole(profile?.role)}</p>
             </div>
           </div>
           <button

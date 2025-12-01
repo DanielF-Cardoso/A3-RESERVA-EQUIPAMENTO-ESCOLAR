@@ -221,7 +221,7 @@ export default function EquipmentPage() {
             <p className="text-slate-600 mb-6">
               Você não tem permissão para acessar esta página.
               <br />
-              Apenas administradores podem gerenciar equipamentos.
+              Apenas coordenadores podem gerenciar equipamentos.
             </p>
             <button
               onClick={() => router.push('/dashboard')}

@@ -231,7 +231,7 @@ export default function SchedulingPage() {
       toast({
         variant: 'destructive',
         title: 'Permissão negada',
-        description: 'Apenas funcionários e administradores podem confirmar agendamentos.',
+        description: 'Apenas secretaria e coordenadores podem confirmar agendamentos.',
       });
       return;
     }
@@ -268,7 +268,7 @@ export default function SchedulingPage() {
       toast({
         variant: 'destructive',
         title: 'Permissão negada',
-        description: 'Apenas funcionários e administradores podem cancelar agendamentos.',
+        description: 'Apenas secretaria e coordenadores podem cancelar agendamentos.',
       });
       return;
     }

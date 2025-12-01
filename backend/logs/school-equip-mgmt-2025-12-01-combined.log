@@ -7751,3 +7751,36 @@
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:33:06.315Z] [INFO] [RequestID=b5647685-804c-4bd7-873a-34054fa81b7f] [CheckEquipmentAvailabilityService] Checking equipment availability from Wed Nov 26 2025 13:00:00 GMT-0300 (Brasilia Standard Time) to Wed Nov 26 2025 14:30:00 GMT-0300 (Brasilia Standard Time)
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:33:06.327Z] [INFO] [RequestID=b5647685-804c-4bd7-873a-34054fa81b7f] [CheckEquipmentAvailabilityService] Found 8 equipments, 8 available
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:33:06.328Z] [INFO] [RequestID=b5647685-804c-4bd7-873a-34054fa81b7f] [HTTP Request] GET /api/v1/equipments/availability?startDate=2025-11-26T13%3A00&endDate=2025-11-26T14%3A30 [32m200[39m (14ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.938Z] [INFO] [RequestID=d8ff7524-2215-437d-9ddc-9ce3046692b1] [GetUserProfileService] Fetching profile for userId: 8af59b38-fc2f-4fbc-b280-71290860c192
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.961Z] [INFO] [RequestID=d8ff7524-2215-437d-9ddc-9ce3046692b1] [GetUserProfileService] User profile found for userId: 8af59b38-fc2f-4fbc-b280-71290860c192
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.962Z] [INFO] [RequestID=d8ff7524-2215-437d-9ddc-9ce3046692b1] [HTTP Request] GET /api/v1/users/me [32m200[39m (24ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.969Z] [INFO] [RequestID=d85b300a-9506-485c-92a3-1e12fffaa742] [GetUserProfileService] Fetching profile for userId: 8af59b38-fc2f-4fbc-b280-71290860c192
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.972Z] [INFO] [RequestID=d85b300a-9506-485c-92a3-1e12fffaa742] [GetUserProfileService] User profile found for userId: 8af59b38-fc2f-4fbc-b280-71290860c192
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:16.972Z] [INFO] [RequestID=d85b300a-9506-485c-92a3-1e12fffaa742] [HTTP Request] GET /api/v1/users/me [32m200[39m (3ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:27.635Z] [INFO] [RequestID=a656601b-ebcc-4df6-81f9-283ab106ad83] [AuthenticateUserService] Authenticating user with email: staff@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:27.688Z] [WARN] [RequestID=a656601b-ebcc-4df6-81f9-283ab106ad83] [AuthenticateUserService] Authentication failed: Invalid password for email: staff@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:27.689Z] [WARN] [RequestID=a656601b-ebcc-4df6-81f9-283ab106ad83] [GlobalExceptionFilter] HttpException: Status=400, Message=Email ou senha inválidos. Verifique as credenciais informadas e tente novamente., IP=::1, Method=POST, URL=/api/v1/login, User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.725Z] [INFO] [RequestID=18519318-99b9-4394-960f-3321f9b8fa1b] [AuthenticateUserService] Authenticating user with email: staff@escola.com
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.772Z] [INFO] [RequestID=18519318-99b9-4394-960f-3321f9b8fa1b] [AuthenticateUserService] User authenticated successfully: staff@escola.com with role: STAFF
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.772Z] [INFO] [RequestID=18519318-99b9-4394-960f-3321f9b8fa1b] [HTTP Request] POST /api/v1/login [32m201[39m (49ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.780Z] [INFO] [RequestID=cb3f8db0-d324-4110-ba47-7ad62170967d] [GetUserProfileService] Fetching profile for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.782Z] [INFO] [RequestID=cb3f8db0-d324-4110-ba47-7ad62170967d] [GetUserProfileService] User profile found for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:30.782Z] [INFO] [RequestID=cb3f8db0-d324-4110-ba47-7ad62170967d] [HTTP Request] GET /api/v1/users/me [32m200[39m (2ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.016Z] [INFO] [RequestID=0e72c16a-19fc-444f-b5cf-7123ec730b60] [ListSchedulingsService] Listing schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.024Z] [INFO] [RequestID=0e72c16a-19fc-444f-b5cf-7123ec730b60] [ListSchedulingsService] Found 18 schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.025Z] [INFO] [RequestID=0e72c16a-19fc-444f-b5cf-7123ec730b60] [HTTP Request] GET /api/v1/schedulings [32m200[39m (10ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.036Z] [INFO] [RequestID=f48fc428-e7f4-4f69-9df8-67cd61003953] [ListSchedulingsService] Listing schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.039Z] [INFO] [RequestID=f48fc428-e7f4-4f69-9df8-67cd61003953] [ListSchedulingsService] Found 18 schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.040Z] [INFO] [RequestID=f48fc428-e7f4-4f69-9df8-67cd61003953] [HTTP Request] GET /api/v1/schedulings [32m200[39m (4ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.046Z] [INFO] [RequestID=91849826-2255-49f0-810a-043429831915] [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.053Z] [INFO] [RequestID=d1f898a6-def2-46a6-912b-81fbf8a72175] [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.054Z] [INFO] [RequestID=d1f898a6-def2-46a6-912b-81fbf8a72175] [ListEquipmentsService] Found 8 equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.054Z] [INFO] [RequestID=d1f898a6-def2-46a6-912b-81fbf8a72175] [HTTP Request] GET /api/v1/equipments [32m200[39m (8ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.056Z] [INFO] [RequestID=d1f898a6-def2-46a6-912b-81fbf8a72175] [ListUsersService] Found 5 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.056Z] [INFO] [RequestID=d1f898a6-def2-46a6-912b-81fbf8a72175] [HTTP Request] GET /api/v1/users [32m200[39m (3ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.062Z] [INFO] [RequestID=6cd8f97c-97b0-427b-9389-c082872a11b6] [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.067Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.068Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [ListEquipmentsService] Found 8 equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.069Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [HTTP Request] GET /api/v1/equipments [32m200[39m (7ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.070Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [ListUsersService] Found 5 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.071Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [HTTP Request] GET /api/v1/users [32m200[39m (4ms) [IP: ::1]

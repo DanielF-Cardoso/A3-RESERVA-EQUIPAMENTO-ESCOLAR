@@ -487,15 +487,3 @@ Este é um projeto acadêmico, mas sugestões são bem-vindas:
 3. Commit suas mudanças (`git commit -m 'Add: nova funcionalidade'`)
 4. Push para a branch (`git push origin feature/nova-funcionalidade`)
 5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos - A3 de Usabilidade, Desenvolvimento Web, Mobile e Jogos.
-
-## 👨‍💻 Autores
-
-Desenvolvido com 💙 por estudantes comprometidos com a qualidade.
-
----
-
-⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!

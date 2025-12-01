@@ -15,7 +15,6 @@ import { UpdateUserController } from './user/update-user.controller'
 import { GetUserProfileController } from './user/get-user-profile.controller'
 import { InactivateUserController } from './user/inactivate-user.controller'
 import { InactivateUserService } from '@/domain/user/application/services/inactivate-user.service'
-import { EmailModule } from '@/infra/email/mailer.module'
 import { CreateEquipmentController } from './equipment/create-equipment.controller'
 import { ListEquipmentsController } from './equipment/list-equipments.controller'
 import { UpdateEquipmentController } from './equipment/update-equipment.controller'
@@ -46,7 +45,7 @@ import { GetDashboardStatsService } from '@/domain/dashboard/application/service
 import { ScheduleModule } from '@nestjs/schedule'
 
 @Module({
-  imports: [DatabaseModule, CryptographyModule, EmailModule, ScheduleModule.forRoot()],
+  imports: [DatabaseModule, CryptographyModule, ScheduleModule.forRoot()],
   controllers: [
     AuthenticateUserController,
     CreateUserController,

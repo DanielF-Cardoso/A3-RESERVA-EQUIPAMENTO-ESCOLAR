@@ -17,6 +17,7 @@ export class PrismaSchedulingMapper {
         updatedAt: raw.updatedAt,
       },
       new UniqueEntityID(raw.id),
+      true, // skipPastDateValidation = true ao carregar do banco
     )
   }
 

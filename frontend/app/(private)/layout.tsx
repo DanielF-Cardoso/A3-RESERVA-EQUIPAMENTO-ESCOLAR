@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useAuthContext } from '@/hooks/useAuthContext';
 
 export default function PrivateLayout({
@@ -9,14 +9,24 @@ export default function PrivateLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { user, loading } = useAuthContext();
+  const { user, profile, loading } = useAuthContext();
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!loading && !user) {
       router.push('/auth');
+      return;
     }
-  }, [user, loading, router]);
+
+    // Redirecionar professores e secretaria do dashboard para agendamentos
+    if (!loading && profile && pathname === '/dashboard') {
+      const role = profile.role?.toLowerCase();
+      if (role === 'teacher' || role === 'staff') {
+        router.push('/scheduling');
+      }
+    }
+  }, [user, profile, loading, router, pathname]);
 
   if (loading) {
     return (

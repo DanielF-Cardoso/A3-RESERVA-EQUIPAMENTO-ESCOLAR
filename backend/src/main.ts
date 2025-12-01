@@ -62,16 +62,27 @@ async function bootstrap() {
 
     if (nodeEnv === 'development') {
       const config = new DocumentBuilder()
-        .setTitle('School Equipment Reservation API')
+        .setTitle('Sistema de Reserva de Equipamentos Escolares')
         .setDescription(
-          'API para sistema de reserva de equipamentos escolares. Permite gerenciamento de equipamentos, agendamentos e usuários (professores, funcionários e administradores).',
+          'API completa para gerenciamento de reservas de equipamentos escolares. ' +
+          'Permite controle de equipamentos, agendamentos e usuários com diferentes níveis de permissão ' +
+          '(Professores, Secretaria e Administradores). Sistema com validação de disponibilidade, ' +
+          'prevenção de conflitos e rastreamento completo de status.',
         )
         .setVersion('1.0')
-        .addTag('Auth', 'Endpoints de autenticação e autorização')
-        .addTag('Users', 'Gerenciamento de usuários')
-        .addTag('Equipment', 'Gerenciamento de equipamentos')
-        .addTag('Scheduling', 'Gerenciamento de agendamentos')
-        .addBearerAuth()
+        .addTag('Dashboard', '📊 Estatísticas e visão geral do sistema')
+        .addTag('Usuários', '👥 Gerenciamento de usuários (professores, secretaria e administradores)')
+        .addTag('Equipamentos', '💻 Gerenciamento de equipamentos (notebooks, tablets, projetores, etc)')
+        .addTag('Agendamentos', '📅 Gerenciamento de reservas e agendamentos de equipamentos')
+        .addBearerAuth(
+          {
+            type: 'http',
+            scheme: 'bearer',
+            bearerFormat: 'JWT',
+            description: 'Informe o token JWT obtido no endpoint de login',
+          },
+          'JWT-auth',
+        )
         .build()
 
       const documentFactory = () => SwaggerModule.createDocument(app, config)

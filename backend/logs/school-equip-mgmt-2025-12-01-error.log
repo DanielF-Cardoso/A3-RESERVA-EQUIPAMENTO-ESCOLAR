@@ -1,1 +1,9 @@
 [SCHOOL-EQUIP-MGMT] [2025-12-01T15:47:11.462Z] [ERROR] [RequestID=47d7996b-29c5-4479-aa60-446f08d47480] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=POST, URL=/api/v1/schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T19:50:00.033Z] [ERROR]   Error in auto-complete job: Start date cannot be in the past
+[SCHOOL-EQUIP-MGMT] [2025-12-01T19:59:54.791Z] [ERROR] [RequestID=174c0cbd-0d86-4ba5-8fa2-938f57823259] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/dashboard/stats
+[SCHOOL-EQUIP-MGMT] [2025-12-01T19:59:54.813Z] [ERROR] [RequestID=03573895-887a-4f5f-a8b8-28914ba92705] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/dashboard/stats
+[SCHOOL-EQUIP-MGMT] [2025-12-01T19:59:58.682Z] [ERROR] [RequestID=52ab0ad0-9880-4e4a-a1d0-70c69da4df3b] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T19:59:58.695Z] [ERROR] [RequestID=047dbadf-6a5b-4e6b-a001-b501afa701dd] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:00:00.024Z] [ERROR] [RequestID=047dbadf-6a5b-4e6b-a001-b501afa701dd]  Error in auto-complete job: Start date cannot be in the past
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:00:01.149Z] [ERROR] [RequestID=22ef4395-05dd-42b0-bbb8-0677ac41d7d7] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/dashboard/stats
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:00:01.163Z] [ERROR] [RequestID=aaf104d9-acb3-408c-a711-c7e8a70e9726] [GlobalExceptionFilter] Unhandled Exception: {} | IP=::1, Method=GET, URL=/api/v1/dashboard/stats

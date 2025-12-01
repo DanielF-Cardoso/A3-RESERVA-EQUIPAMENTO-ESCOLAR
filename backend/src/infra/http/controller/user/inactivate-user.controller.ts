@@ -31,7 +31,7 @@ export class InactivateUserController {
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('ADMIN')
   @InactivateUserDocs()
-  @HttpCode(204)
+  @HttpCode(200)
   async handle(@Param('id') id: string, @Req() req: AuthenticatedRequest) {
     const result = await this.inactivateUserService.execute({
       userId: id,
@@ -61,6 +61,8 @@ export class InactivateUserController {
       }
     }
 
-    return {}
+    return {
+      message: 'Usuário inativado com sucesso.',
+    }
   }
 }

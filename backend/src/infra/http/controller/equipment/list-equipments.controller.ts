@@ -9,8 +9,6 @@ import {
 import { EquipmentPresenter } from '../../presenters/equipment.presenter'
 import { ApiTags } from '@nestjs/swagger'
 import { ListEquipmentsDocs } from '@/infra/docs/equipment/list-equipments.doc'
-import { RolesGuard } from '@/infra/auth/guards/roles.guard'
-import { Roles } from '@/infra/auth/decorators/roles.decorator'
 
 @ApiTags('Equipamentos')
 @Controller('equipments')
@@ -20,8 +18,7 @@ export class ListEquipmentsController {
   ) {}
 
   @Get()
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
+  @UseGuards(JwtAuthGuard)
   @ListEquipmentsDocs()
   async list() {
     const result = await this.listEquipmentsService.execute()

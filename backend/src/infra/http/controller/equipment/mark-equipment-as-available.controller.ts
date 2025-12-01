@@ -13,6 +13,7 @@ import { ApiTags } from '@nestjs/swagger'
 import { ResourceNotFoundError } from '@/core/errors/resource-not-found.error'
 import { RolesGuard } from '@/infra/auth/guards/roles.guard'
 import { Roles } from '@/infra/auth/decorators/roles.decorator'
+import { MarkEquipmentAsAvailableDocs } from '@/infra/docs/equipment/mark-equipment-as-available.doc'
 
 @ApiTags('Equipamentos')
 @Controller('equipments')
@@ -24,6 +25,7 @@ export class MarkEquipmentAsAvailableController {
   @Patch(':id/available')
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('ADMIN')
+  @MarkEquipmentAsAvailableDocs()
   async markAsAvailable(@Param('id') id: string) {
     const result = await this.markEquipmentAsAvailableService.execute({
       equipmentId: id,

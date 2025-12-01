@@ -18,6 +18,7 @@ import { EmailAlreadyExistsError } from '@/core/errors/email-already-exists.erro
 import { PhoneAlreadyExistsError } from '@/domain/user/application/services/errors/phone-already-exists.error'
 import { RolesGuard } from '@/infra/auth/guards/roles.guard'
 import { Roles } from '@/infra/auth/decorators/roles.decorator'
+import { UpdateOtherUserProfileDocs } from '@/infra/docs/user/update-other-user-profile.doc'
 
 @ApiTags('Usuários')
 @Controller('users')
@@ -29,6 +30,7 @@ export class UpdateUserController {
   @Patch(':id')
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('ADMIN')
+  @UpdateOtherUserProfileDocs()
   async handle(
     @Param('id') userId: string,
     @Body() body: UpdateUserDTO,

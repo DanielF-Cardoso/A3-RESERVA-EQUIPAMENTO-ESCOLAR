@@ -18,7 +18,8 @@ export default function AuthPage() {
   // Redirecionar se já estiver autenticado
   useEffect(() => {
     if (!authLoading && user) {
-      router.push('/dashboard');
+      // Não redirecionar aqui, deixar o handleSubmit cuidar disso
+      // ou redirecionar para a página padrão do usuário
     }
   }, [user, authLoading, router]);
 
@@ -37,11 +38,21 @@ export default function AuthPage() {
           description: result.error.message,
         });
       } else {
+        // Redirecionar baseado no role do usuário
+        const userRole = result.data?.user?.role?.toLowerCase();
+        let redirectPath = '/dashboard'; // Default para admin
+        let successMessage = 'Redirecionando para o dashboard...';
+
+        if (userRole === 'teacher' || userRole === 'staff') {
+          redirectPath = '/scheduling';
+          successMessage = 'Redirecionando para agendamentos...';
+        }
+
         toast({
           title: 'Login realizado com sucesso!',
-          description: 'Redirecionando para o dashboard...',
+          description: successMessage,
         });
-        router.push('/dashboard');
+        router.push(redirectPath);
       }
     } catch (err) {
       const errorMessage = 'Erro inesperado. Tente novamente.';

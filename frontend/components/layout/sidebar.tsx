@@ -6,7 +6,7 @@ import { LayoutDashboard, Package, Calendar, Users, LogOut, GraduationCap, Lapto
 import { useAuthContext } from '@/hooks/useAuthContext';
 
 const allNavigation = [
-  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['admin', 'staff', 'teacher'] },
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['admin'] },
   { name: 'Equipamentos', href: '/equipment', icon: LaptopMinimal, roles: ['admin'] },
   { name: 'Agendamentos', href: '/scheduling', icon: Calendar, roles: ['admin', 'staff', 'teacher'] },
   { name: 'Usuários', href: '/users', icon: Users, roles: ['admin'] },
@@ -87,12 +87,12 @@ export function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           <div className="flex items-center gap-3 px-4 py-3 mb-2">
             <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center flex-shrink-0">
               <span className="text-sm font-medium">
-                {profile?.full_name?.charAt(0).toUpperCase()}
+                {profile?.full_name?.charAt(0).toUpperCase() || profile?.email?.charAt(0).toUpperCase() || 'U'}
               </span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium truncate">{profile?.full_name}</p>
-              <p className="text-xs text-slate-400 capitalize">{profile?.role}</p>
+              <p className="text-sm font-medium truncate">{profile?.full_name || profile?.email || 'Usuário'}</p>
+              <p className="text-xs text-slate-400 capitalize">{profile?.role?.toLowerCase() || 'usuário'}</p>
             </div>
           </div>
           <button

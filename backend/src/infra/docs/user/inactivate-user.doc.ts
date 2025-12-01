@@ -15,8 +15,13 @@ export function InactivateUserDocs() {
       type: String,
     }),
     ApiResponse({
-      status: 204,
-      description: 'Usuário inativado com sucesso. Retorna sem conteúdo.',
+      status: 200,
+      description: 'Usuário inativado com sucesso.',
+      schema: {
+        example: {
+          message: 'Usuário inativado com sucesso.',
+        },
+      },
     }),
     ApiResponse({
       status: 401,

@@ -6,12 +6,14 @@ import {
   UseGuards,
   Query,
 } from '@nestjs/common'
-import { ListSchedulingsQueryDTO } from '../../dtos/scheduling/list-schedulings-query.dto'
+import { ListSchedulingsQueryDTO } from '../../dto/scheduling/list-schedulings-query.dto'
 import { ListSchedulingsService } from '@/domain/scheduling/application/services/list-schedulings.service'
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { SchedulingPresenter } from '../../presenters/scheduling.presenter'
 import { ListSchedulingsDoc } from '../../../docs/scheduling/list-schedulings.doc'
+import { ApiTags } from '@nestjs/swagger'
 
+@ApiTags('Agendamentos')
 @Controller('schedulings')
 @UseGuards(JwtAuthGuard)
 export class ListSchedulingsController {

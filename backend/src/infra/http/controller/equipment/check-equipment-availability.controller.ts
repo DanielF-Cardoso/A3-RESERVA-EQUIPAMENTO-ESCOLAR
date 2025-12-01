@@ -8,6 +8,7 @@ import {
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { CheckEquipmentAvailabilityService } from '@/domain/equipment/application/services/check-equipment-availability.service'
 import { ApiTags } from '@nestjs/swagger'
+import { CheckEquipmentAvailabilityDocs } from '@/infra/docs/equipment/check-equipment-availability.doc'
 
 @ApiTags('Equipamentos')
 @Controller('equipments/availability')
@@ -18,6 +19,7 @@ export class CheckEquipmentAvailabilityController {
 
   @Get()
   @UseGuards(JwtAuthGuard)
+  @CheckEquipmentAvailabilityDocs()
   async handle(
     @Query('startDate') startDate: string,
     @Query('endDate') endDate: string,

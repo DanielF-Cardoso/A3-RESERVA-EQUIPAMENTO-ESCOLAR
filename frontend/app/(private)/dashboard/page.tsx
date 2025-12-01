@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Package, Calendar, Users, TrendingUp } from 'lucide-react';
 import { MainLayout } from '@/components/layout/main-layout';
 import { PageHeader } from '@/components/ui/page-header';
@@ -24,13 +24,7 @@ export default function DashboardPage() {
   const { profile } = useAuthContext();
   const { toast } = useToast();
 
-  useEffect(() => {
-    if (profile) {
-      loadDashboardData();
-    }
-  }, [profile]);
-
-  const loadDashboardData = async () => {
+  const loadDashboardData = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -62,7 +56,19 @@ export default function DashboardPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [toast]);
+
+  useEffect(() => {
+    // Proteção: apenas ADMIN pode acessar dashboard
+    if (profile) {
+      const role = profile.role?.toLowerCase();
+      if (role !== 'admin') {
+        // Usuários não-admin não devem ver o dashboard
+        return;
+      }
+      loadDashboardData();
+    }
+  }, [profile, loadDashboardData]);
 
   const getStatusBadge = (status: string) => {
     const variants: Record<string, { variant: 'success' | 'warning' | 'danger' | 'info'; label: string }> = {

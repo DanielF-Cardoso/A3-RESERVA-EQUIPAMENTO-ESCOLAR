@@ -6,7 +6,7 @@ import {
   ApiBearerAuth,
   ApiBody,
 } from '@nestjs/swagger'
-import { CreateSchedulingDTO } from '../../http/dtos/scheduling/create-scheduling.dto'
+import { CreateSchedulingDTO } from '../../http/dto/scheduling/create-scheduling.dto'
 
 export function CreateSchedulingDoc() {
   return applyDecorators(

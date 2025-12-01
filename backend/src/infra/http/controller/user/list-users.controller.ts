@@ -9,8 +9,6 @@ import { ListUsersService } from '@/domain/user/application/services/list-users.
 import { UserPresenter } from '../../presenters/user.presenter'
 import { ApiTags } from '@nestjs/swagger'
 import { ListUsersDocs } from '@/infra/docs/user/list-users.doc'
-import { RolesGuard } from '@/infra/auth/guards/roles.guard'
-import { Roles } from '@/infra/auth/decorators/roles.decorator'
 
 @ApiTags('Usuários')
 @Controller('users')
@@ -20,8 +18,7 @@ export class ListUsersController {
   ) {}
 
   @Get()
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
+  @UseGuards(JwtAuthGuard)
   @ListUsersDocs()
   async handle() {
     const result = await this.listUsersService.execute()

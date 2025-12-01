@@ -12,7 +12,7 @@ import {
   BadRequestException,
   ForbiddenException,
 } from '@nestjs/common'
-import { UpdateSchedulingDTO } from '../../dtos/scheduling/update-scheduling.dto'
+import { UpdateSchedulingDTO } from '../../dto/scheduling/update-scheduling.dto'
 import { UpdateSchedulingService } from '@/domain/scheduling/application/services/update-scheduling.service'
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { SchedulingPresenter } from '../../presenters/scheduling.presenter'
@@ -20,6 +20,7 @@ import { ResourceNotFoundError } from '@/core/errors/resource-not-found.error'
 import { UnauthorizedError } from '@/core/errors/unauthorized.error'
 import { InsufficientQuantityError } from '@/domain/scheduling/application/services/errors/insufficient-quantity.error'
 import { ApiTags } from '@nestjs/swagger'
+import { UpdateSchedulingDocs } from '@/infra/docs/scheduling/update-scheduling.doc'
 
 @ApiTags('Agendamentos')
 @Controller('schedulings')
@@ -29,6 +30,7 @@ export class UpdateSchedulingController {
 
   @Patch(':id')
   @HttpCode(HttpStatus.OK)
+  @UpdateSchedulingDocs()
   async handle(
     @Param('id') id: string,
     @Body() body: UpdateSchedulingDTO,

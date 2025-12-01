@@ -9,6 +9,7 @@ import { GetDashboardStatsService } from '@/domain/dashboard/application/service
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { ApiTags } from '@nestjs/swagger'
 import { DashboardSchedulingPresenter } from '../../presenters/dashboard-scheduling.presenter'
+import { GetDashboardStatsDocs } from '@/infra/docs/dashboard/get-dashboard-stats.doc'
 
 @ApiTags('Dashboard')
 @Controller('dashboard')
@@ -18,6 +19,7 @@ export class GetDashboardStatsController {
 
   @Get('stats')
   @HttpCode(HttpStatus.OK)
+  @GetDashboardStatsDocs()
   async handle() {
     const result = await this.getDashboardStats.execute()
 

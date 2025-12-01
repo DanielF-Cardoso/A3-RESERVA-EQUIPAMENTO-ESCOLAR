@@ -10,13 +10,15 @@ import {
   ConflictException,
   BadRequestException,
 } from '@nestjs/common'
-import { CreateSchedulingDTO } from '../../dtos/scheduling/create-scheduling.dto'
+import { CreateSchedulingDTO } from '../../dto/scheduling/create-scheduling.dto'
 import { CreateSchedulingService } from '@/domain/scheduling/application/services/create-scheduling.service'
 import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { SchedulingPresenter } from '../../presenters/scheduling.presenter'
 import { CreateSchedulingDoc } from '../../../docs/scheduling/create-scheduling.doc'
 import { ResourceNotFoundError } from '@/core/errors/resource-not-found.error'
+import { ApiTags } from '@nestjs/swagger'
 
+@ApiTags('Agendamentos')
 @Controller('schedulings')
 @UseGuards(JwtAuthGuard)
 export class CreateSchedulingController {

@@ -138,13 +138,15 @@ export class Scheduling extends Entity<SchedulingProps> {
   static create(
     props: Optional<SchedulingProps, 'createdAt' | 'status' | 'updatedAt'>,
     id?: UniqueEntityID,
+    skipPastDateValidation = false, // Permite carregar agendamentos passados do banco
   ): Scheduling {
     // Validate dates
     if (props.startDate >= props.endDate) {
       throw new Error('Start date must be before end date')
     }
 
-    if (props.startDate < new Date()) {
+    // Só valida data passada se NÃO estiver carregando do banco (ou seja, ao criar novo)
+    if (!skipPastDateValidation && props.startDate < new Date()) {
       throw new Error('Start date cannot be in the past')
     }
 

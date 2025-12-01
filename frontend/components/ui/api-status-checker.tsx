@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Activity, CheckCircle, XCircle } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5555';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5555/api/v1';
 
 export function ApiStatusChecker() {
   const [status, setStatus] = useState<'idle' | 'checking' | 'online' | 'offline'>('idle');

@@ -12,13 +12,13 @@ import { JwtAuthGuard } from '@/infra/auth/jwt-auth.guard'
 import { UpdateUserService } from '@/domain/user/application/services/update-user.service'
 import { ResourceNotFoundError } from '@/core/errors/resource-not-found.error'
 import { UserPresenter } from '../../presenters/user.presenter'
-import { UpdateUserDTO } from '../../dto/user/update-user.dto'
 import { ApiTags } from '@nestjs/swagger'
 import { EmailAlreadyExistsError } from '@/core/errors/email-already-exists.error'
 import { PhoneAlreadyExistsError } from '@/domain/user/application/services/errors/phone-already-exists.error'
 import { RolesGuard } from '@/infra/auth/guards/roles.guard'
 import { Roles } from '@/infra/auth/decorators/roles.decorator'
 import { UpdateOtherUserProfileDocs } from '@/infra/docs/user/update-other-user-profile.doc'
+import { UpdateUserDTO } from '../../dto/user/update-user.dto'
 
 @ApiTags('Usuários')
 @Controller('users')

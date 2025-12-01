@@ -7784,3 +7784,154 @@
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.069Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [HTTP Request] GET /api/v1/equipments [32m200[39m (7ms) [IP: ::1]
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.070Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [ListUsersService] Found 5 user(s)
 [SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:31.071Z] [INFO] [RequestID=ca8bd9e2-7588-4ff6-a2c2-5500d9139ef0] [HTTP Request] GET /api/v1/users [32m200[39m (4ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.411Z] [INFO] [RequestID=b1b11240-926e-42c7-a7c8-410965d0a5a9] [GetUserProfileService] Fetching profile for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.416Z] [INFO] [RequestID=b1b11240-926e-42c7-a7c8-410965d0a5a9] [GetUserProfileService] User profile found for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.417Z] [INFO] [RequestID=b1b11240-926e-42c7-a7c8-410965d0a5a9] [HTTP Request] GET /api/v1/users/me [32m200[39m (9ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.425Z] [INFO] [RequestID=a11c5401-42d2-4d2b-9aca-ab610a21c1a8] [GetUserProfileService] Fetching profile for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.428Z] [INFO] [RequestID=a11c5401-42d2-4d2b-9aca-ab610a21c1a8] [GetUserProfileService] User profile found for userId: 0c2d1761-ff85-4bd5-8730-dbc8deefb629
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.428Z] [INFO] [RequestID=a11c5401-42d2-4d2b-9aca-ab610a21c1a8] [HTTP Request] GET /api/v1/users/me [32m200[39m (3ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.457Z] [INFO] [RequestID=907259d5-5afa-44e2-83d9-fcef5e643de1] [ListSchedulingsService] Listing schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.465Z] [INFO] [RequestID=907259d5-5afa-44e2-83d9-fcef5e643de1] [ListSchedulingsService] Found 18 schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.467Z] [INFO] [RequestID=907259d5-5afa-44e2-83d9-fcef5e643de1] [HTTP Request] GET /api/v1/schedulings [32m200[39m (13ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.479Z] [INFO] [RequestID=d1f56174-d395-483c-8015-bfe2b64234e2] [ListSchedulingsService] Listing schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.485Z] [INFO] [RequestID=251efaf5-daf3-49c1-9ff6-9229837d762c] [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.488Z] [INFO] [RequestID=251efaf5-daf3-49c1-9ff6-9229837d762c] [ListSchedulingsService] Found 18 schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.489Z] [INFO] [RequestID=251efaf5-daf3-49c1-9ff6-9229837d762c] [HTTP Request] GET /api/v1/schedulings [32m200[39m (11ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.490Z] [INFO] [RequestID=251efaf5-daf3-49c1-9ff6-9229837d762c] [ListEquipmentsService] Found 8 equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.493Z] [INFO] [RequestID=251efaf5-daf3-49c1-9ff6-9229837d762c] [HTTP Request] GET /api/v1/equipments [32m200[39m (9ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.497Z] [INFO] [RequestID=5b274e2c-4898-4f1d-b093-c2b7ff214a5e] [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.503Z] [INFO] [RequestID=545110fb-7dbd-4749-a269-cad257a63ca5] [ListSchedulingsService] Listing schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.508Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.510Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [ListUsersService] Found 5 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.511Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [HTTP Request] GET /api/v1/users [32m200[39m (14ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.514Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [ListSchedulingsService] Found 18 schedulings
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.518Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [HTTP Request] GET /api/v1/schedulings [32m200[39m (13ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.523Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [ListEquipmentsService] Found 8 equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.524Z] [INFO] [RequestID=264855ec-da73-4837-9845-ace258ebb69f] [HTTP Request] GET /api/v1/equipments [32m200[39m (16ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.530Z] [INFO] [RequestID=eca6879c-d27d-4a57-836b-6b73cf0520dc] [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.536Z] [INFO] [RequestID=5d869470-0834-4e8e-9b05-7b49bb5fdc54] [ListEquipmentsService] Listing all equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.537Z] [INFO] [RequestID=5d869470-0834-4e8e-9b05-7b49bb5fdc54] [ListUsersService] Found 5 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.538Z] [INFO] [RequestID=5d869470-0834-4e8e-9b05-7b49bb5fdc54] [HTTP Request] GET /api/v1/users [32m200[39m (8ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.540Z] [INFO] [RequestID=5d869470-0834-4e8e-9b05-7b49bb5fdc54] [ListEquipmentsService] Found 8 equipments
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.543Z] [INFO] [RequestID=5d869470-0834-4e8e-9b05-7b49bb5fdc54] [HTTP Request] GET /api/v1/equipments [32m200[39m (8ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.550Z] [INFO] [RequestID=bccddef8-a898-4394-9b43-2e8ecd9a8bc3] [ListUsersService] Listing all users
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.553Z] [INFO] [RequestID=bccddef8-a898-4394-9b43-2e8ecd9a8bc3] [ListUsersService] Found 5 user(s)
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:36:45.553Z] [INFO] [RequestID=bccddef8-a898-4394-9b43-2e8ecd9a8bc3] [HTTP Request] GET /api/v1/users [32m200[39m (3ms) [IP: ::1]
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.468Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.474Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.475Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.476Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.476Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.477Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.477Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.478Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.478Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.479Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.479Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.480Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.480Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.480Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.480Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.480Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.481Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.481Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.481Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.481Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.481Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.482Z] [INFO]  [RoutesResolver] UpdateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.483Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.483Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.483Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.483Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.484Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.484Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.484Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.484Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.485Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.485Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.485Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.486Z] [INFO]  [RoutesResolver] MarkEquipmentAsAvailableController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.486Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/available, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.486Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RoutesResolver] CheckEquipmentAvailabilityController {/api/v1/equipments/availability}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/availability, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.487Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.488Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.488Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.488Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.488Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.489Z] [INFO]  [RoutesResolver] UpdateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.489Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.489Z] [INFO]  [RoutesResolver] GetDashboardStatsController {/api/v1/dashboard}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.489Z] [INFO]  [RouterExplorer] Mapped {/api/v1/dashboard/stats, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:37.489Z] [INFO]  [NestApplication] Nest application successfully started
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.406Z] [INFO]  [NestFactory] Starting Nest application...
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.411Z] [INFO]  [InstanceLoader] AppModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.412Z] [INFO]  [InstanceLoader] PassportModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.412Z] [INFO]  [InstanceLoader] DatabaseModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.413Z] [INFO]  [InstanceLoader] ConfigHostModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.413Z] [INFO]  [InstanceLoader] DiscoveryModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.413Z] [INFO]  [InstanceLoader] ConfigModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.414Z] [INFO]  [InstanceLoader] ScheduleModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.414Z] [INFO]  [InstanceLoader] EnvModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.415Z] [INFO]  [InstanceLoader] AuthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.415Z] [INFO]  [InstanceLoader] JwtModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.416Z] [INFO]  [InstanceLoader] LoggerModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.416Z] [INFO]  [InstanceLoader] CryptographyModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.416Z] [INFO]  [InstanceLoader] HealthModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.416Z] [INFO]  [InstanceLoader] HttpModule dependencies initialized
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.417Z] [INFO]  [RoutesResolver] HealthCheckController {/api/v1/health}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.417Z] [INFO]  [RouterExplorer] Mapped {/api/v1/health, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.417Z] [INFO]  [RoutesResolver] AuthenticateUserController {/api/v1/login}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.417Z] [INFO]  [RouterExplorer] Mapped {/api/v1/login, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.417Z] [INFO]  [RoutesResolver] CreateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RoutesResolver] GetUserProfileController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RoutesResolver] ListUsersController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.418Z] [INFO]  [RoutesResolver] UpdateUserProfileController {/api/v1/users/me}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/me, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RoutesResolver] UpdateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RoutesResolver] InactivateUserController {/api/v1/users}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RouterExplorer] Mapped {/api/v1/users/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RoutesResolver] CreateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.419Z] [INFO]  [RoutesResolver] ListEquipmentsController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RoutesResolver] UpdateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RoutesResolver] MarkEquipmentAsMaintenanceController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/maintenance, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.420Z] [INFO]  [RoutesResolver] MarkEquipmentAsAvailableController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/:id/available, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RoutesResolver] InactivateEquipmentController {/api/v1/equipments}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/inactivate/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RoutesResolver] CheckEquipmentAvailabilityController {/api/v1/equipments/availability}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RouterExplorer] Mapped {/api/v1/equipments/availability, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RoutesResolver] CreateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.421Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, POST} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.422Z] [INFO]  [RoutesResolver] ListSchedulingsController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.422Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.422Z] [INFO]  [RoutesResolver] ConfirmSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.422Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/confirm, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.422Z] [INFO]  [RoutesResolver] CancelSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id/cancel, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [RoutesResolver] UpdateSchedulingController {/api/v1/schedulings}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [RouterExplorer] Mapped {/api/v1/schedulings/:id, PATCH} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [RoutesResolver] GetDashboardStatsController {/api/v1/dashboard}:
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [RouterExplorer] Mapped {/api/v1/dashboard/stats, GET} route
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:39:50.423Z] [INFO]  [NestApplication] Nest application successfully started
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:40:00.011Z] [INFO]  [AutoCompleteSchedulingsService] Running auto-complete schedulings job
+[SCHOOL-EQUIP-MGMT] [2025-12-01T20:40:00.026Z] [INFO]  [AutoCompleteSchedulingsService] No schedulings to auto-complete
